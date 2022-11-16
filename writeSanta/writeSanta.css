@@ -1,0 +1,38 @@
+@import url("../write/write.css");
+/* 나머진 write.css 에서 끌어오고 이미지 바뀐 부분이나 추가된 부분의 css 만 추가로 작성했어요 */
+
+.contentWrap {
+  height: 1258px;
+}
+
+#writeSantaLetter {
+  text-align: center;
+}
+
+#writeSantaLetter textarea {
+  /*편지 받아오는곳*/
+  width: 340px;
+  height: 121px;
+  padding: 20px;
+
+  background-color: #ffcb66;
+  color: #0a0a0a;
+  border-radius: 20px;
+  font-size: larger;
+
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+#writeBorder {
+  /*중간선*/
+  border-top: solid 1.5px #ebc479;
+  width: 340px;
+  height: 50px;
+  margin-top: 40px;
+}
+
+#inputBox textarea {
+  background-image: url("../image/santa with bottle time looking 1.svg");
+}

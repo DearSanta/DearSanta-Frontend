@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <title>Dear.Santa</title>
+
+    <link rel="stylesheet" href="letterCheck.css" />
+
+    <!-- jquery를 불러옵니다. jquery.com download 페이지를 참조해주세요 -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+
+    <!-- 부가적인 테마 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="writeBox">
+      <div class="contentWrap">
+        <div class="writeProfile">
+          <a href="#"><img src="../image/profile.svg" alt="profile" /></a>
+        </div>
+        <div class="writeLogo">
+          <img src="../image/Dear. Santa.svg" alt="logoLeft" />
+        </div>
+
+        <div id="myLetter">
+          <textarea name="Letter" placeholder="" readonly>예시입니다</textarea>
+        </div>
+
+        <div class="writeFromLogo" id="myName">
+          <img src="../image/From.svg" alt="from" />
+          <span>이승빈</span>
+        </div>
+
+        <div id="writeBorder"></div>
+
+        <div class="writeLogo" id="myName">
+          <img src="../image/Dear.svg" alt="logoLeft" />
+          <span>이승빈</span>
+        </div>
+
+        <div id="letterFromSanta">
+          <textarea name="Letter" placeholder="" readonly>예시입니다</textarea>
+        </div>
+        <div class="writeFromLogo">
+          <img src="../image/From. Santa.svg" alt="from" />
+        </div>
+        <section class="write-btn mt-3">
+          <div>
+            <button
+              type="button"
+              class="button-write mt-3"
+              onclick=""
+              id="buttonCheckpage"
+            >
+              확인
+            </button>
+          </div>
+        </section>
+
+        <div id="ItsmeImg">
+          <img src="../image/Itsme.svg" />
+        </div>
+
+        <footer>
+          <p>Dear.Santa</p>
+          <span>&copy; 2022 Name all rights reserved</span>
+          <span>Contact email@email.com</span>
+        </footer>
+      </div>
+    </div>
+    <script src="write.js"></script>
+  </body>
+</html>
