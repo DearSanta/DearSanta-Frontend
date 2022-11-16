@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
+    <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+    <title>회원가입</title>
+    <script defer src="../account/jscode/join_btn.js"></script>
+    <script defer src="../account/jscode/api.js"></script>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'NEXON Lv1 Gothic OTF Light';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    body{
+        background-color: #FFE2A9;
+    }
+
+    a{text-decoration-line: none;}
+
+    #Title {
+        text-align: center;
+        position: absolute;
+        width: 272px;
+        height: 75px;
+        left: 59px;
+        top: 120px;
+
+        font-family: 'Pangolin';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 75px;
+        /* identical to box height */
+
+        letter-spacing: -0.03em;
+        color: #3EAD17;
+    }
+
+    #Sub_Title{
+        text-align: center;
+        position: absolute;
+        width: 177px;
+        height: 18px;
+        left: 106px;
+        top: 202px;
+
+        font-family: 'NEXON Lv1 Gothic OTF';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        line-height: 18px;
+
+        color: #0A0A0A;
+    }
+
+    #leaf{
+        position: absolute;
+        width: 103px;
+        height: 60px;
+        left: 143px;
+        top: 243px;
+    }
+
+    #name{
+        position: absolute;
+        width: 344px;
+        height: 47px;
+        left: 23px;
+        top: 325px;
+        border-radius: 100px;
+        border-style: hidden;
+
+        text-indent: 30px;
+    }
+
+    #id{
+        position: absolute;
+        width: 344px;
+        height: 47px;
+        left: 23px;
+        top: 388px;
+        border-radius: 100px;
+        border-style: hidden;
+
+        text-indent: 30px;
+    }
+
+    #pwd{
+        position: absolute;
+        width: 344px;
+        height: 47px;
+        left: 23px;
+        top: 451px;
+        border-radius: 100px;
+        border-style: hidden;
+
+        text-indent: 30px;
+    }
+
+    #check_pwd{
+        position: absolute;
+        width: 344px;
+        height: 47px;
+        left: 23px;
+        top: 514px;
+        border-radius: 100px;
+        border-style: hidden;
+
+        text-indent: 30px;
+    }
+
+    #join_submitbtn{
+        text-align: center;
+        color: white;
+        background-color: #4D2E27;
+        border-radius: 100px;
+        border-style: hidden;
+
+        font-family: 'NEXON Lv1 Gothic Low OTF';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        
+        position: absolute;
+        width: 344px;
+        height: 47px;
+        left: 23px;
+        top: 621px;
+    }
+
+    #join_submitbtn:disabled{
+        background-color: #FFD686;
+        color: #FFB526;
+    }
+</style>
+
+<body>
+    <section>
+        <div id = "Title"> 
+            D<a style="color: #FA4E28
+                ">e</a><a style="color:#FFA800;">a</a><a style = "color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
+        </div>
+        <div id = "Sub_Title">서로의 산타가 되어보아요</div>
+
+        <div id = "leaf">
+            <image src = "../Image/leaf 1.svg"></image>
+        </div>
+    </section>
+
+    <section>
+        <form class = info_box>
+            <div>
+                <input type="text" id = "name" placeholder="닉네임을 입력하세요">
+            </div>
+            <div>
+                <input type="text" id = "id" placeholder="아이디를 입력하세요">
+            </div>
+            <div>
+                <input type="password" id = "pwd"  placeholder="비밀번호를 입력하세요">
+            </div>
+            <div>
+                <input type="password" id = "check_pwd" placeholder="비밀번호를 다시 입력하세요">
+            </div>
+            
+            <div>
+                <button type="button" id = join_submitbtn onclick = "handleSignin()" disabled>확인</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
