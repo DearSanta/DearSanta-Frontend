@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "DearSanta-Frontend",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Default(error)"
+	}
+}
