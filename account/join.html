@@ -139,6 +139,27 @@
         background-color: #FFD686;
         color: #FFB526;
     }
+
+    #checkPw{
+        position: absolute;
+        width: 153px;
+        height: 13px;
+        left: 53px;
+        top: 571px;
+
+        font-family: 'NEXON Lv1 Gothic Low OTF';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        /* identical to box height */
+
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.05em;
+
+        color: #FF6C6C;
+            }
 </style>
 
 <body>
@@ -163,10 +184,11 @@
                 <input type="text" id = "id" placeholder="아이디를 입력하세요">
             </div>
             <div>
-                <input type="password" id = "pwd"  placeholder="비밀번호를 입력하세요">
+                <input type="password" id = "pwd"  class ="pw" placeholder="비밀번호를 입력하세요">
             </div>
             <div>
-                <input type="password" id = "check_pwd" placeholder="비밀번호를 다시 입력하세요">
+                <input type="password" id = "check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
+                <span id="checkPw"></span>
             </div>
             
             <div>
@@ -176,5 +198,7 @@
     </section>
     <script src="../account/jscode/join_btn.js"></script>
     <script async src="../account/jscode/api.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="../account/jscode/check.js"></script>
 </body>
 </html>
