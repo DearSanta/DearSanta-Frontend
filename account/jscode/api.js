@@ -1,7 +1,7 @@
 /**api token code */
 const frondend_base_url = "http://127.0.0.1:5500"
-/**backemd url 필요 */
-const backend_base_url = ""
+/**backend url */
+const backend_base_url = "http://15.164.132.25:8080"
 
 async function handleSignin(){
 
@@ -11,7 +11,7 @@ async function handleSignin(){
         password : document.getElementById("pwd").value,
     }
 
-    const response = await fetch(`${backend_base_url}/signup`,{
+    const response = await fetch(`${backend_base_url}/accounts/signup`,{
         headers:{
             Accept:"application/json",
             'Content-type' : 'application/json' 
@@ -37,7 +37,7 @@ async function handleLogin(){
         password : document.getElementById("pwd").value
     }
 
-    const response = await fetch(`${backend_base_url}/user/api/token`,{
+    const response = await fetch(`${backend_base_url}/account/login`,{
         headers:{
             Accept:"application/json",
                 'Content-type' : 'application/json' 
@@ -51,8 +51,8 @@ async function handleLogin(){
 
 
     if(response.status == 200){
-        localStorage.setItem("access", response_json.access)
-        localStorage.setItem("refresh", response_json.access)
+        localStorage.setItem("access_token", response_json.access)
+        localStorage.setItem("refresh_token", response_json.access)
 
         /**데이터 파싱 */
         const base64Url = response_json.access.split('.')[1];
@@ -62,7 +62,7 @@ async function handleLogin(){
         }).join(''));
 
         localStorage.setItem("payload", jsonPayload);
-        //widow.location.replace(`${frontend_base_url}/`);
+        widow.location.replace(`${frontend_base_url}/`);
     }else{
         alert(response.status)
     }
