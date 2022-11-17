@@ -32,8 +32,7 @@
   margin-top: 95px;
 }
 
-#findIdBox input,
-#findFwBox input {
+#findBox input {
   /* 아이디찾기, 비밀번호찾기 인풋 */
   width: 344px;
   height: 47px;
@@ -46,14 +45,12 @@
   padding-top: 14px;
 }
 
-#findIdBox p,
-#findFwBox p {
+#findBox p {
   margin-left: 25px;
   font-weight: 900;
 }
 
-#findIdBox input::placeholder,
-#findFwBox input::placeholder {
+#findBox input::placeholder {
   opacity: 0.5;
 }
 

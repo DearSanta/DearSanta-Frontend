@@ -1,3 +1,8 @@
+/**api token code */
+const frondend_base_url = "http://127.0.0.1:5500";
+/**backend url */
+const backend_base_url = "http://15.164.132.25:8080";
+
 $(document).ready(function () {
   // 대상 textarea  이벤트 keyup
 
@@ -16,18 +21,19 @@ $(document).ready(function () {
   });
 });
 
-const fromWho = () => {
-  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+// 편지 가져오기. 안해도 되는건강??
+// const fromWho = () => {
+//   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      var name = data;
-      const fromWho = document.getElementById("fromWho");
-      fromWho.innerText = name.id;
-    });
-};
-fromWho();
+//   fetch(URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var name = data;
+//       const fromWho = document.getElementById("fromWho");
+//       fromWho.innerText = name.id;
+//     });
+// };
+// fromWho();
 
 // 편지보내기 fetch
 
@@ -39,11 +45,13 @@ function sendLetter() {
 
     const formData = new FormData(form);
     const payload = new URLSearchParams(formData);
+    const access_token = localStorage.getItem("access_token"); //토큰 가져오기
 
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch(`${backend_base_url}/letter/write`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: `Bearer ${access_token}`, //Authorization 따옴표 묶어야함.
       },
       body: payload,
     })
@@ -51,6 +59,9 @@ function sendLetter() {
       .then((data) => console.log(data));
   });
 
-  var link = "#"; // # 에 이동할 페이지 주소(?) 입력
-  location.href = link;
+  if (response.status == 200) {
+    window.location.replace(`${frondend_base_url}/Loading.html`);
+  } else {
+    alert(response.status);
+  }
 }
