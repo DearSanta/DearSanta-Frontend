@@ -1,3 +1,9 @@
+/**api token code */
+const frondend_base_url = "http://127.0.0.1:5500";
+/**backend url */
+const backend_base_url = "http://15.164.132.25:8080";
+
+
 $(document).ready(function () {
   // 대상 textarea  이벤트 keyup
 
@@ -17,45 +23,46 @@ $(document).ready(function () {
 });
 
 //fecth 연습
-const userLetterBox = () => {
-  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+// const userLetterBox = () => {
+//   const URL = "http://15.164.132.25:8080/";
 
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      var num = data;
-      const inputBox = document.getElementById("userLetterBox");
-      inputBox.innerText = num.title;
-    });
-};
-userLetterBox();
+//   fetch(URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var num = data;
+//       const inputBox = document.getElementById("userLetterBox");
+//       inputBox.innerText = num.title;
+//     });
+// };
+// userLetterBox();
 
-const dearWho_Santa = () => {
-  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+// const dearWho_Santa = () => {
+//   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      var name = data;
-      const dearWhoSanta = document.getElementById("dearWhoSanta");
-      dearWhoSanta.innerText = name.id;
-    });
-};
-dearWho_Santa();
+//   fetch(URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var name = data;
+//       const dearWhoSanta = document.getElementById("dearWhoSanta");
+//       dearWhoSanta.innerText = name.id;
+//     });
+// };
+// dearWho_Santa();
 
-const fromWho_Santa = () => {
-  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+// const fromWho_Santa = () => {
+//   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-  fetch(URL)
-    .then((response) => response.json())
-    .then((data) => {
-      var name = data;
-      const fromWhoSanta = document.getElementById("fromWhoSanta");
-      fromWhoSanta.innerText = name.id;
-    });
-};
-fromWho_Santa();
+//   fetch(URL)
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var name = data;
+//       const fromWhoSanta = document.getElementById("fromWhoSanta");
+//       fromWhoSanta.innerText = name.id;
+//     });
+// };
+// fromWho_Santa();
 // URL, element 뒤 인자(?)들 수정 필요
+
 
 function sendLetter() {
   const form = document.getElementById("writeAsSantaLetterForm");
@@ -65,11 +72,13 @@ function sendLetter() {
 
     const formData = new FormData(form);
     const payload = new URLSearchParams(formData);
+    const access_token = localStorage.getItem("access_token"); //토큰 가져오기
 
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch(`${backend_base_url}/letter/answer`, {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": `Bearer ${access_token}`, //Authorization 따옴표 묶어야함.
       },
       body: payload,
     })
@@ -77,6 +86,9 @@ function sendLetter() {
       .then((data) => console.log(data));
   });
 
-  const link = "#";
-  location.href = link;
+  if(response.status == 200){
+    window.location.replace(`${frondend_base_url}/flow.html`);
+  }else{
+    alert(response.status)
+  }
 }
