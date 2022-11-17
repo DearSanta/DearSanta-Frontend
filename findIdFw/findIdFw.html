@@ -38,33 +38,43 @@
           <img src="/image/BigLogo.svg" alt="" />
         </div>
 
-        <div id="findpageBox">
-          <div id="findIdBox">
-            <p>아이디 찾기</p>
-            <input type="text" placeholder="닉네임을 입력하세요" />
-          </div>
-
-          <div id="findpageBorder"></div>
-
-          <div id="findFwBox">
-            <p>비밀번호 찾기</p>
-            <input type="text" placeholder="아이디를 입력하세요" />
-          </div>
-
-          <section class="write-btn mt-3">
-            <div>
-              <button
-                type="button"
-                class="button-check mt-3"
-                onclick="getLetter()"
-                disabled
-                id="buttonWrite"
-              >
-                확인
-              </button>
+        <form id="sendIdOrFw">
+          <div id="findpageBox">
+            <div id="findIdBox">
+              <p>아이디 찾기</p>
+              <input
+                name="getNickname"
+                type="text"
+                placeholder="닉네임을 입력하세요"
+              />
             </div>
-          </section>
-        </div>
+
+            <div id="findpageBorder"></div>
+
+            <div id="findFwBox">
+              <p>비밀번호 찾기</p>
+              <input
+                name="getId"
+                type="text"
+                placeholder="아이디를 입력하세요"
+              />
+            </div>
+
+            <section class="write-btn mt-3">
+              <div>
+                <button
+                  type="submit"
+                  class="button-check mt-3"
+                  onclick="sendIdOrFw()"
+                  disabled
+                  id="buttonWrite"
+                >
+                  확인
+                </button>
+              </div>
+            </section>
+          </div>
+        </form>
       </div>
     </div>
     <script src="findIdFw.js"></script>
