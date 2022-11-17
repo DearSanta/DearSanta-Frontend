@@ -16,38 +16,22 @@ $(document).ready(function () {
   });
 });
 
-//write, writeSanta 에 둘 다 끌어갑니당
-
-// function getLetter() {
-//   const config = {
-//     method: "get",
-//   };
-
-//   fetch("http://127.0.0.1:5500/write.html", config)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-// }
-
 //fecth 연습
+const userLetterBox = () => {
+  const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-// function sendLetter() {
-//   const letterContent = document.getElementById("inputText").innerText;
-//   const URL = "https://jsonplaceholder.typicode.com/posts";
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var num = data;
+      const inputBox = document.getElementById("userLetterBox");
+      inputBox.innerText = num.title;
+    });
+};
+userLetterBox();
 
-//   fetch(URL, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       content: letterContent,
-//     }),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-// }
 function sendLetter() {
-  const form = document.getElementById("writeLetterForm");
+  const form = document.getElementById("writeAsSantaLetterForm");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -65,7 +49,4 @@ function sendLetter() {
       .then((res) => res.json())
       .then((data) => console.log(data));
   });
-
-  var link = "#"; //내부에 이동할 페이지 주소(?) 입력
-  location.href = link;
 }
