@@ -16,36 +16,21 @@ $(document).ready(function () {
   });
 });
 
-//write, writeSanta 에 둘 다 끌어갑니당
+const fromWho = () => {
+  const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
-// function getLetter() {
-//   const config = {
-//     method: "get",
-//   };
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var name = data;
+      const fromWho = document.getElementById("fromWho");
+      fromWho.innerText = name.id;
+    });
+};
+fromWho();
 
-//   fetch("http://127.0.0.1:5500/write.html", config)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-// }
+// 편지보내기 fetch
 
-//fecth 연습
-
-// function sendLetter() {
-//   const letterContent = document.getElementById("inputText").innerText;
-//   const URL = "https://jsonplaceholder.typicode.com/posts";
-
-//   fetch(URL, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       content: letterContent,
-//     }),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-// }
 function sendLetter() {
   const form = document.getElementById("writeLetterForm");
 
@@ -66,6 +51,6 @@ function sendLetter() {
       .then((data) => console.log(data));
   });
 
-  var link = "#"; //내부에 이동할 페이지 주소(?) 입력
+  var link = "#"; // # 에 이동할 페이지 주소(?) 입력
   location.href = link;
 }

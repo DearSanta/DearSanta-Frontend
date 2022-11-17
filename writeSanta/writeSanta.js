@@ -30,6 +30,33 @@ const userLetterBox = () => {
 };
 userLetterBox();
 
+const dearWho_Santa = () => {
+  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var name = data;
+      const dearWhoSanta = document.getElementById("dearWhoSanta");
+      dearWhoSanta.innerText = name.id;
+    });
+};
+dearWho_Santa();
+
+const fromWho_Santa = () => {
+  const URL = "https://jsonplaceholder.typicode.com/posts/1";
+
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var name = data;
+      const fromWhoSanta = document.getElementById("fromWhoSanta");
+      fromWhoSanta.innerText = name.id;
+    });
+};
+fromWho_Santa();
+// URL, element 뒤 인자(?)들 수정 필요
+
 function sendLetter() {
   const form = document.getElementById("writeAsSantaLetterForm");
 
@@ -49,4 +76,7 @@ function sendLetter() {
       .then((res) => res.json())
       .then((data) => console.log(data));
   });
+
+  const link = "#";
+  location.href = link;
 }

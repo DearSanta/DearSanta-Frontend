@@ -49,41 +49,41 @@
 
         <div class="writeFromLogo">
           <img src="../image/From.svg" alt="from" />
-          <span>이승빈</span>
+          <span id="fromWhoSanta"></span>
         </div>
 
         <div id="writeBorder"></div>
 
         <div class="writeLogo">
           <img src="../image/Dear.svg" alt="logoLeft" />
-          <span>이승빈</span>
+          <span id="dearWhoSanta"></span>
         </div>
 
-        <form id="writeAsSantaLetterForm"></form>
-        <div id="inputBox">
-          <textarea
-            name="writeInput"
-            placeholder="잠시동안 당신은 마음씨 따뜻한 산타,&#10;착한 어른이의 편지에 답장해주세요 !"
-            id="inputText"
-          ></textarea>
-        </div>
-        <div class="writeFromLogo">
-          <img src="../image/From. Santa.svg" alt="from" />
-        </div>
-        <section class="write-btn mt-3">
-          <div>
-            <button
-              type="submit"
-              class="button-write mt-3"
-              onclick=""
-              disabled
-              id="buttonWrite"
-            >
-              편지 보내기
-            </button>
+        <form id="writeAsSantaLetterForm">
+          <div id="inputBox">
+            <textarea
+              name="letterContentAsSanta"
+              placeholder="잠시동안 당신은 마음씨 따뜻한 산타,&#10;착한 어른이의 편지에 답장해주세요 !"
+              id="inputText"
+            ></textarea>
           </div>
-        </section>
-
+          <div class="writeFromLogo">
+            <img src="../image/From. Santa.svg" alt="from" />
+          </div>
+          <section class="write-btn mt-3">
+            <div>
+              <button
+                type="submit"
+                class="button-write mt-3"
+                onclick="sendLetter()"
+                disabled
+                id="buttonWrite"
+              >
+                편지 보내기
+              </button>
+            </div>
+          </section>
+        </form>
         <footer>
           <p>Dear.Santa</p>
           <span>&copy; 2022 Name all rights reserved</span>
