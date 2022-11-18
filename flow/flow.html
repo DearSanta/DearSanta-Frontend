@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="flow.css">
-    <title>Document</title>
+    <title>처음시작플로우</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         
@@ -22,13 +22,23 @@
         var curIdx = text.indexOf(mid.innerHTML);
         myText.innerHTML = text[(curIdx+1)%text.length];
         }
-        setInterval(callMe,3000);
+        setInterval(callMe,4000);
         
+        function window_onload() {
+            setTimeout('goPage()',15000)
+        }
+
+        function goPage() {
+            location.href="../before_answer/answer_first.html?id=<%=id%>"
+
+        }
+
+
 
     </script>
 
 </head>
-<body>
+<body onload="javascript:window_onload()">
     <div class="all_i_want">
     
         <div class="upper">
