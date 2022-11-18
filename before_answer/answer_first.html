@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <title>편지쓰기</title>
 </head>
 
 <style>
-     @font-face {
-        font-family: 'NEXON Lv1 Gothic OTF Light';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
     @font-face {
         font-family: 'SUIT-Medium';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
@@ -23,11 +19,11 @@
         font-style: normal;
     }
 
-    body{
+    body {
         background-color: #FFE2A9;
     }
 
-    #header{
+    #header {
         position: absolute;
         width: 390px;
         height: 104px;
@@ -35,21 +31,21 @@
         top: 0px;
     }
 
-    .Title{
-       font-family: 'Pangolin';
-       font-style: normal;
-       text-align: center;
-       font-size: 25px;
+    .Title {
+        font-family: 'Pangolin';
+        font-style: normal;
+        text-align: center;
+        font-size: 25px;
 
-       position: absolute;
-       width: 125.65px;
-       height: 20.33px;
-       left: 132px;
-       top: 52px;
-       color: #3EAD17;
-   }
+        position: absolute;
+        width: 125.65px;
+        height: 20.33px;
+        left: 132px;
+        top: 52px;
+        color: #3EAD17;
+    }
 
-    .my_page{
+    .my_page {
         position: absolute;
         width: 20px;
         height: 20px;
@@ -57,7 +53,7 @@
         top: 54px;
     }
 
-    #main_text{
+    #main_text {
         position: absolute;
         width: 179px;
         height: 65px;
@@ -73,14 +69,14 @@
         color: #FFB422;
     }
 
-    #sub_text{
+    #sub_text {
         position: absolute;
         width: 199px;
         height: 21px;
         left: 95px;
         top: 233px;
 
-        font-family: 'NEXON Lv1 Gothic Low OTF';
+        font-family: 'NexonLv1Gothic';
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -92,7 +88,7 @@
         color: #0A0A0A;
     }
 
-    #cookie{
+    #cookie {
         position: absolute;
         width: 164px;
         height: 197px;
@@ -100,19 +96,19 @@
         top: 357px;
     }
 
-    .letter_button{
-        color: white;
+    .letter_button {
+        color: #FAFAFA;
         background-color: #4D2E27;
         border-radius: 100px;
         border-style: hidden;
 
-        font-family: 'NEXON Lv1 Gothic Low OTF';
+        font-family: 'NexonLv1Gothic';
         font-style: normal;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 16px;
         line-height: 18px;
         text-align: center;
-        letter-spacing: 2px;
+        letter-spacing: 0.15em;
 
         position: absolute;
         width: 344px;
@@ -121,7 +117,7 @@
         top: 650px;
     }
 
-    #footer{
+    #footer {
         position: absolute;
         width: 390px;
         height: 157px;
@@ -130,7 +126,7 @@
         background: #FFE2A9;
     }
 
-    #footer_box{
+    #footer_box {
         position: absolute;
         width: 216px;
         height: 63px;
@@ -138,7 +134,7 @@
         top: 30px;
     }
 
-    #main_footer{
+    #main_footer {
         position: absolute;
         width: 85px;
         height: 20px;
@@ -154,7 +150,7 @@
         color: #4D2E27;
     }
 
-    #sub_footer{
+    #sub_footer {
         position: absolute;
         width: 211px;
         height: 40px;
@@ -171,40 +167,45 @@
 
         color: #4D2E27;
     }
-
 </style>
 
 <body>
-    <section id = header>
-        <div class = "Title">D<a style="color: #FA4E28
-            ">e</a><a style="color:#FFA800;">a</a><a style = "color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a></div>
-        <div class = "my_page"><image src = "../Image/profile.png"></image></div>
+    <section id=header>
+        <div class="Title">D<a style="color: #FA4E28
+            ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
+        </div>
+        <div class="my_page">
+            <image src="../Image/profile.png"></image>
+        </div>
     </section>
 
     <section>
-        <div id = main_text>First,</div>
+        <div id=main_text>First,</div>
         <div id="sub_text">
             산타 할아버지에게
             <br>
             나만의 얘기를 들려주세요
             답장해주실거예요!
         </div>
-        <div id = "cookie"><image src="../Image/ginger breadman 1.png"></image></div>
+        <div id="cookie">
+            <image src="../Image/ginger breadman 1.png"></image>
+        </div>
     </section>
-    
+
     <form>
         <div>
-            <a href = ""><input type="button" value="편지쓰기" class= "letter_button">
+            <a href=""><input type="button" value="편지쓰기" class="letter_button">
             </a>
         </div>
     </form>
 </body>
 
-<footer id = footer>
-    <section id = footer_box>
-        <div id = 'main_footer'>Dear.Santa</div>
-        <div id = "sub_footer">© 2022 Name all right reserved.
-        Contact email@email.com</div>
+<footer id=footer>
+    <section id=footer_box>
+        <div id='main_footer'>Dear.Santa</div>
+        <div id="sub_footer">© 2022 Name all right reserved.
+            Contact email@email.com</div>
     </section>
 </footer>
+
 </html>

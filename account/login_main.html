@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <title>login_main</title>
 </head>
 <style>
-    @font-face {
-        font-family: 'NEXON Lv1 Gothic OTF Light';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    body{
+    body {
         background-color: #FFE2A9;
     }
 
-    a{text-decoration-line: none;}
+    a {
+        text-decoration-line: none;
+    }
 
     #Title {
         text-align: center;
@@ -40,7 +38,7 @@
         color: #3EAD17;
     }
 
-    #Sub_Title{
+    #Sub_Title {
         text-align: center;
         position: absolute;
         width: 177px;
@@ -48,7 +46,7 @@
         left: 106px;
         top: 202px;
 
-        font-family: 'NEXON Lv1 Gothic OTF';
+        font-family: 'NexonLv1Gothic';
         font-weight: 400;
         font-style: normal;
         font-size: 16px;
@@ -57,7 +55,7 @@
         color: #0A0A0A;
     }
 
-    #Santa{
+    #Santa {
         position: absolute;
         width: 200px;
         height: 329.19px;
@@ -65,7 +63,7 @@
         top: 253px;
     }
 
-    #santa2{
+    #santa2 {
         position: absolute;
         width: 53.63px;
         height: 81.23px;
@@ -74,20 +72,22 @@
         transform: rotate(29.78deg);
     }
 
-    .login_button{
+    input{
+        position: absolute;
         text-align: center;
-        color: white;
+        color: #FAFAFA;
+        font-family: 'NexonLv1Gothic';
+        font-style: normal;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.05em;
+    }
+
+    .login_button {
         background-color: #4D2E27;
         border-radius: 100px;
         border-style: hidden;
 
-        font-family: 'NEXON Lv1 Gothic Low OTF';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 1px;
-        
         position: absolute;
         width: 344px;
         height: 47px;
@@ -95,42 +95,34 @@
         top: 626px;
     }
 
-    .join_button{
-        text-align: center;
-        color: white;
+    .join_button {
         background-color: #FFB017;
         border-radius: 100px;
         border-style: hidden;
-
-        font-family: 'NEXON Lv1 Gothic Low OTF';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 18px;
-        letter-spacing: 1px;
-        
+       
         position: absolute;
         width: 344px;
         height: 47px;
         left: 23px;
         top: 689px;
     }
-
 </style>
+
 <body>
     <section>
-        <div id = "Title"> D<a style="color: #FA4E28
-                ">e</a><a style="color:#FFA800;">a</a><a style = "color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
+        <div id="Title"> D<a style="color: #FA4E28
+                ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">.
+                Santa</a>
         </div>
-        <div id = "Sub_Title">서로의 산타가 되어보아요</div>
+        <div id="Sub_Title">서로의 산타가 되어보아요</div>
     </section>
 
     <section>
-        <div id = "Santa">
-            <image src = "../Image/santa standing on sled 1.png"></image>
+        <div id="Santa">
+            <image src="../Image/santa standing on sled 1.png"></image>
         </div>
-        <div id = santa2>
-            <image src = "../Image/santa standing on sled 2.png"></image>
+        <div id=santa2>
+            <image src="../Image/santa standing on sled 2.png"></image>
         </div>
     </section>
 
@@ -138,12 +130,13 @@
     <section>
         <form>
             <div>
-                <a href = "login.html"><input type="button" value="로그인하기" class = login_button></a>
+                <a href="login.html"><input type="button" value="로그인하기" class=login_button></a>
             </div>
             <div>
-                <a href = "join.html"><input type="button" value="회원가입하기" class = "join_button"></a>
+                <a href="join.html"><input type="button" value="회원가입하기" class="join_button"></a>
             </div>
-        </form>    
+        </form>
     </section>
 </body>
+
 </html>

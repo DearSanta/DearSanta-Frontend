@@ -10,7 +10,6 @@ async function handleSignin(){
         email : document.getElementById("id").value,
         password1 : document.getElementById("pwd").value,
         password2 : document.getElementById("check_pwd").value,
-
     }
 
     const response = await fetch(`${backend_base_url}/accounts/signup`,{

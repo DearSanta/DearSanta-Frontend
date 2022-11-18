@@ -7,8 +7,6 @@ $('.pw').focusout(function(){
             $("#checkPw").html('');    
         } else {
             $("#checkPw").html('비밀번호가 일치하지 않습니다.');
-            $("#check_pwd").focus();
         }
     }
-
 })
