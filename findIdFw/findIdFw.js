@@ -39,26 +39,26 @@ $(document).ready(function () {
     });
 });
 
-function sendIdOrFw() {
-  const form = document.getElementById("sendIdOrFw");
+// function sendIdOrFw() {
+//   const form = document.getElementById("sendIdOrFw");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
 
-    const formData = new FormData(form);
-    const payload = new URLSearchParams(formData);
+//     const formData = new FormData(form);
+//     const payload = new URLSearchParams(formData);
 
-    fetch(`${backend_base_url}/accounts/find/password?email=`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: payload,
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  });
-}
+//     fetch(`${backend_base_url}/accounts/find/password?email=`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/x-www-form-urlencoded",
+//       },
+//       body: payload,
+//     })
+//       .then((res) => res.json())
+//       .then((data) => console.log(data));
+//   });
+// }
 
 const btn = document.getElementById("buttonWrite");
 btn.addEventListener("button", function () {
@@ -66,12 +66,35 @@ btn.addEventListener("button", function () {
   localStorage.setItem("email", emailAddress);
 
   if (response.status == 200) {
-    window.location.replace(`${frontend_base_url}/fwInform.html`);
+    window.location.replace(`${frontend_base_url}/fwInform/fwInform.html`);
   } else {
     alert(response.status);
   }
 });
 
+// function sendIdOrFw() {
+//   const emailAddress = document.getElementById("emailBox");
+//   localStorage.setItem("email", emailAddress);
+
+//   const data = {
+//     content: document.getElementById("emailBox"),
+//   };
+
+//   const response = fetch(`${backend_base_url}/accounts/find/password?email=${emailAddress}`, {
+//     headers: {
+//       Accept: "application/json",
+//       "Content-type": "application/json",
+//     },
+//     method: "POST",
+//     body: JSON.stringify(data),
+//   });
+
+//   if (response.status == 200) {
+//     window.location.replace(`${frontend_base_url}../flow/flow.html`);
+//   } else {
+//     alert(response.status);
+//   }
+// }
 // const getIdFw = () => {
 //   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 

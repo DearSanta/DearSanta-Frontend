@@ -38,7 +38,6 @@ $(document).ready(function () {
 // 편지보내기 fetch
 
 function sendLetter() {
-  
   const access_token = localStorage.getItem("access_token");
 
   const data = {
@@ -49,7 +48,7 @@ function sendLetter() {
     headers: {
       Accept: "application/json",
       "Content-type": "application/json",
-      'Authorization': `Bearer ${access_token}`,
+      Authorization: `Bearer ${access_token}`,
     },
     method: "POST",
     body: JSON.stringify(data),
@@ -62,6 +61,18 @@ function sendLetter() {
   }
 }
 
+const fromWho = () => {
+  const URL = `${backend_base_url}/accounts/info`;
+
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var data = data;
+      const dearWhoSanta = document.getElementById("fromWho");
+      dearWhoSanta.innerText = data.user_name;
+    });
+};
+fromWho();
 // form.addEventListener("submit", (e) => {
 //   e.preventDefault();
 

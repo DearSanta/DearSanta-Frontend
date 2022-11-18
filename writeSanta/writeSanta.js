@@ -35,31 +35,33 @@ $(document).ready(function () {
 // };
 // userLetterBox();
 
-// const dearWho_Santa = () => {
-//   const URL = "https://jsonplaceholder.typicode.com/posts/1";
+const dearWho_Santa = () => {
+  const URL = `${backend_base_url}/accounts/info`;
 
-//   fetch(URL)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       var name = data;
-//       const dearWhoSanta = document.getElementById("dearWhoSanta");
-//       dearWhoSanta.innerText = name.id;
-//     });
-// };
-// dearWho_Santa();
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var data = data;
+      const dearWhoSanta = document.getElementById("dearWhoSanta");
+      dearWhoSanta.innerText = data.user_name;
+    });
+};
+dearWho_Santa();
 
-// const fromWho_Santa = () => {
-//   const URL = "https://jsonplaceholder.typicode.com/posts/1";
+const fromWho_Santa = () => {
+  const URL = `${backend_base_url}/letter/any`;
 
-//   fetch(URL)
-//     .then((response) => response.json())
-//     .then((data) => {
-//       var name = data;
-//       const fromWhoSanta = document.getElementById("fromWhoSanta");
-//       fromWhoSanta.innerText = name.id;
-//     });
-// };
-// fromWho_Santa();
+  fetch(URL)
+    .then((response) => response.json())
+    .then((data) => {
+      var data = data;
+      const fromWhoSanta = document.getElementById("fromWhoSanta");
+      fromWhoSanta.innerText = data.writer;
+      const inputBox = document.getElementById("userLetterBox");
+      inputBox.innerText = data.content;
+    });
+};
+fromWho_Santa();
 // URL, element 뒤 인자(?)들 수정 필요
 
 // function sendLetterAsSanta() {
@@ -135,7 +137,7 @@ function sendLetterAsSanta() {
     headers: {
       Accept: "application/json",
       "Content-type": "application/json",
-      "Authorization": `Bearer ${access_token}`,
+      Authorization: `Bearer ${access_token}`,
     },
     method: "POST",
     body: JSON.stringify(data),
