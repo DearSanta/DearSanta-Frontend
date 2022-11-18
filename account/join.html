@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
     <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimun-scale=1.0, maximun-scale=1.0, user-scalable=no">
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <title>회원가입</title>
@@ -112,7 +113,7 @@
         text-indent: 30px;
     }
 
-    input{
+    input {
         position: absolute;
         font-family: 'NexonLv1Gothic';
         font-style: normal;
@@ -121,7 +122,9 @@
         letter-spacing: 0.05em;
     }
 
-    input:focus{outline: none;}
+    input:focus {
+        outline: none;
+    }
 
     #join_submitbtn {
         text-align: center;
@@ -169,40 +172,42 @@
 </style>
 
 <body>
-    <section>
-        <div id="Title">
-            D<a style="color: #FA4E28
+    <div id = content>
+        <div>
+            <div id="Title">
+                D<a style="color: #FA4E28
                 ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">.
-                Santa</a>
+                    Santa</a>
+            </div>
+            <div id="Sub_Title">서로의 산타가 되어보아요</div>
+
+            <div id="leaf">
+                <image src="../Image/leaf 1.svg"></image>
+            </div>
         </div>
-        <div id="Sub_Title">서로의 산타가 되어보아요</div>
 
-        <div id="leaf">
-            <image src="../Image/leaf 1.svg"></image>
+        <div>
+            <form class=info_box>
+                <div>
+                    <input type="text" id="name" placeholder="닉네임을 입력하세요">
+                </div>
+                <div>
+                    <input type="text" id="id" placeholder="아이디를 입력하세요">
+                </div>
+                <div>
+                    <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요">
+                </div>
+                <div>
+                    <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
+                    <span id="checkPw"></span>
+                </div>
+
+                <div>
+                    <button type="button" id=join_submitbtn onclick="handleSignin()" disabled>확인</button>
+                </div>
+            </form>
         </div>
-    </section>
-
-    <section>
-        <form class=info_box>
-            <div>
-                <input type="text" id="name" placeholder="닉네임을 입력하세요">
-            </div>
-            <div>
-                <input type="text" id="id" placeholder="아이디를 입력하세요">
-            </div>
-            <div>
-                <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요">
-            </div>
-            <div>
-                <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
-                <span id="checkPw"></span>
-            </div>
-
-            <div>
-                <button type="button" id=join_submitbtn onclick="handleSignin()" disabled>확인</button>
-            </div>
-        </form>
-    </section>
+    </div>
     <script src="../account/jscode/join_btn.js"></script>
     <script async src="../account/jscode/api.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
