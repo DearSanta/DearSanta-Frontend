@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Loading.css">
-    <title>Document</title>
+    <title>내 편지 작성후 화면</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
+    <script>
+         function window_onload() {
+            setTimeout('goPage()',3000)
+        }
+
+        function goPage() {
+            location.href="../before_answer/answer_wait.html?id=<%=id%>"
+
+        }
+    </script>
 
 </head>
-<body>
+<body onload="javascript:window_onload()">
     <div class="all_i_want">
         <div class="upper">
             <img class="up_logo" src="./img/logo.png" alt="로고이미지">
