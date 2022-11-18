@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <title>Dear.Santa</title>
+
+    <link rel="stylesheet" href="fwInform.css" />
+
+    <!-- jquery를 불러옵니다. jquery.com download 페이지를 참조해주세요 -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    />
+
+    <!-- 부가적인 테마 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    />
+
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div id="writeBox">
+      <div class="contentWrap">
+        <div id="FindpageLogo">
+          <img src="/image/BigLogo.svg" alt="" />
+        </div>
+
+            <div id="fwInformContent">
+                <p id="fwInformName"></p> <!-- 이승빈 을 템플릿이나 api로 바꿔야댐-->
+            
+            <div id="fwInformBox">
+                <textarea id="informFw" name="informFw" placeholder="" readonly></textarea>
+            </div>
+            
+                <p>입니다</p>
+            </div>
+          <section class="write-btn mt-3">
+            <div>
+              <button
+                type="button"
+                class="button-check mt-3"
+                id="buttonfwInform"
+              >
+                확인
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="fwInform.js"></script>
+  </body>
+</html>
