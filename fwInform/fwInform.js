@@ -19,7 +19,7 @@ const fwInformName = () => {
       const btn = document.getElementById("buttonfwInform");
       btn.addEventListener("button", function () {
         if (response.status == 200) {
-          window.location.replace(`${frondend_base_url}/`);
+          window.location.replace(`${frondend_base_url}/login.html`);
         } else {
           alert(response.status);
         }
