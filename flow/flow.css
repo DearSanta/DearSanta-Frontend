@@ -6,6 +6,10 @@
     font-style: normal;
   }
 
+.all_i_want{
+    margin: 0 auto;
+   
+}
 
 
 body{
@@ -13,157 +17,154 @@ body{
     margin:0;
     font-family: "NEXON Lv1 Gothic OTF";
 }
-.upper{
-   text-align: center;
-}
+
 .up_logo{
-    width: 35%;
-    margin-top: 5%;
+    width: 125.65px;
+    margin-top: 25px;
+    margin-left: 135px;
     
-    
+}
+.upper{
+    width: 390px;
 }
 
 .profile_logo{
-    float: right;
-    margin-top: -5.5%;
-    margin-right: 5%; 
+   margin-left: 80px;
+    
+ 
 }
 
 .upper_star{
-    width:100%;
     display:flex;
-    
 }
 .one_star{
-    width:5%;
-    height: 5%;
-    margin-left:5%;
+    width:19px;
+    height: 18px;
+    margin-left:15px;
    
 }
 .two_star{
-    margin-top: 30%;
-    width:10%;
-    height: 10%;
+    margin-top: 130px;
+    width:33px;
+    height: 32px;
 }
 .three_star{
-    width:5%;
-    height: 5%;
-    margin-left:19%;
-    margin-top: 8%;
+    width:17px;
+    height: 16px;
+    margin-left:80px;
+    margin-top: 30px;
 }
 .four_star{
-    width:6%;
-    height: 6%;
-    margin-left: 16%;
-    margin-top:20%;
+    width:26px;
+    height: 25px;
+    margin-left: 70px;
+    margin-top:100px;
 }
 .five_star{
-    width:6%;
-    height: 6%;
-    margin-top: 5%;
-    margin-left: 10%;
+    width:23px;
+    height: 22px;
+    margin-top: 15px;
+    margin-left: 40px;
 }
 .six_star{
-    width:7%;
-    height: 7%;
-    margin-left:7%;
-    margin-top: 35%;
+    width:23px;
+    height: 22px;
+    margin-left:20px;
+    margin-top: 150px;
 }
 
 #mid{
     text-align: center;
-    margin-top: 8%;
-    margin-bottom: 8%;
-    color:white;
-    padding: 4%;
    
-}
-.mid_text{
     color:white;
+    padding: 30px;
+   
 }
 
 .lower_star{
     display: flex;
-    margin-top:20%;
+    margin-top:69px;
 }
 
 .low_one_star{
-    width:5%;
-    height: 5%;
-    margin-left: 5%;
+    width:22px;
+    height: 21px;
+    margin-left: 20px;
 }
 
 .low_two_star{
-    width:10%;
-    height:10%;
-    margin-left: 10%;
-    margin-top: 30%;
+    width:33px;
+    height:32px;
+    margin-left: 30px;
+    margin-top: 150px;
 }
 
 .low_three_star{
-    width:8%;
-    height:8%;
-    margin-left: 40%;
-    margin-top: 8%;
+    width:32px;
+    height:31px;
+    margin-left: 160px;
+    margin-top: 30px;
 }
 
 .low_four_star{
-    width:5%;
-    height: 5%;
-    margin-left: 10%;
-    margin-top: 35%;
+    width:19px;
+    height: 18px;
+    margin-left: 40px;
+    margin-top: 160px;
 }
 
 .lower{
     display: flex;
-    margin-top:-3.7%;
+    margin-top:-38px;
 }
 .snowball{
-    width:30%;
-    height:30%;
-    margin-left: 2%;
-    margin-top: 25%;
+    width:118px;
+    height:109px;
+    margin-left: 10px;
+    margin-top: 70px;
     z-index: 3;
 }
 .tree{
-    width:30%;
-    height:30%;
-    margin-top:-20%;
-    margin-left:3%;
+    width:104px;
+    height:256px;
+    margin-top:-83px;
+    margin-left:15px;
     z-index: 3;
 }
 .snowman{
-    width:30%;
-    height:30%;
-    margin-left:5%;
-    margin-top: 23%;
+    width:102px;
+    height:110px;
+    margin-left:15px;
+    margin-top: 80px;
     z-index: 3;
 }
 .foot{
     display: flex;
 }
 .snow{
-    margin-top:-8%;
+    margin-top:-31px;
     position:relative;
-    width: 100%;
+    width: 390px;
     z-index:0;
+    margin:0;
 }
 
 
-.snow{
-    width:100%;
-   
-}
+
 footer{
-    width:100%;
+    width:390px;
     display: flex;
 }
 .foot_logo{
-    width:100%;
-    
+    width:390px;
+    margin-top:-1px;
+}
+.fo{
+    margin-top:-31px;
 }
 
 .mid_t{
-   width:100%;
-   position: fixed;
+   width:390px;
+   height: 20px;
+   text-align: center;
 }
