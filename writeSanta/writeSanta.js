@@ -3,23 +3,6 @@ const frontend_base_url = "http://127.0.0.1:5500";
 /**backend url */
 const backend_base_url = "http://15.164.132.25:8000";
 
-$(document).ready(function () {
-  // 대상 textarea  이벤트 keyup
-
-  // var inputLength = 글자 길이 val().length();
-
-  $("textarea").keyup(function () {
-    var inputLength = $(this).val().length;
-
-    if (inputLength > 0) {
-      $("#buttonWrite").attr("disabled", false);
-      $("#buttonWrite").css({ backgroundColor: "#4D2E27", color: "#FAFAFA" });
-    } else {
-      $("#buttonWrite").attr("disabled", true);
-      $("#buttonWrite").css({ backgroundColor: "#FFD686", color: "#FFB526" });
-    }
-  });
-});
 
 //fecth 연습
 // const userLetterBox = () => {
@@ -37,8 +20,13 @@ $(document).ready(function () {
 
 const dearWho_Santa = () => {
   const URL = `${backend_base_url}/accounts/info`;
+  const access_token = localStorage.getItem("access_token");
 
-  fetch(URL)
+  fetch(URL, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       var data = data;
@@ -50,8 +38,13 @@ dearWho_Santa();
 
 const fromWho_Santa = () => {
   const URL = `${backend_base_url}/letter/any`;
+  const access_token = localStorage.getItem("access_token");
 
-  fetch(URL)
+  fetch(URL, {
+    headers: {
+      "Authorization": `Bearer ${access_token}`,
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       var data = data;
@@ -126,25 +119,25 @@ $(document).ready(function () {
 
 // 편지보내기 fetch
 
-function sendLetterAsSanta() {
+async function sendLetterAsSanta() {
   const access_token = localStorage.getItem("access_token");
 
   const data = {
-    content: document.getElementById("inputText"),
+    content: document.getElementById("inputText").value,
   };
 
-  const response = fetch(`${backend_base_url}/letter/answer`, {
+  const response = await fetch(`${backend_base_url}/letter/answer`, {
     headers: {
       Accept: "application/json",
       "Content-type": "application/json",
-      Authorization: `Bearer ${access_token}`,
+      "Authorization": `Bearer ${access_token}`,
     },
     method: "POST",
     body: JSON.stringify(data),
   });
 
   if (response.status == 200) {
-    window.location.replace(`${frontend_base_url}../flow/flow.html`);
+    window.location.replace(`${frontend_base_url}/flow/Get_letter.html`);
   } else {
     alert(response.status);
   }

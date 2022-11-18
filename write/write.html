@@ -41,35 +41,35 @@
           <img src="../image/Dear. Santa.svg" alt="logoLeft" />
         </div>
 
-        <form id="writeLetterForm">
-          <div id="inputBox">
-            <textarea
-              name="content"
-              placeholder="산타에게 나만의 얘기를 들려주세요&#10;마음씨 따뜻한 산타가 답장해줄거예요 !&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;편지를 보내면 수정할 수 없어요!"
-              id="inputText"
-            ></textarea>
+        <!-- <form id="writeLetterForm"> -->
+        <div id="inputBox">
+          <textarea
+            name="content"
+            placeholder="산타에게 나만의 얘기를 들려주세요&#10;마음씨 따뜻한 산타가 답장해줄거예요 !&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;편지를 보내면 수정할 수 없어요!"
+            id="inputText"
+          ></textarea>
+        </div>
+        <div class="writeFromLogo">
+          <img src="../image/From.svg" alt="from" />
+          <span id="fromWho"></span>
+        </div>
+
+        <section class="write-btn mt-3">
+          <div>
+            <button
+              type="button"
+              class="button-write mt-3"
+              onclick="sendLetter()"
+              disabled
+              id="buttonWrite"
+            >
+              <!--sendLetter 함수 안에 js로  페이지 이동 구현 -->
+              편지 보내기
+            </button>
           </div>
-          <div class="writeFromLogo">
-            <img src="../image/From.svg" alt="from" />
-            <span id="fromWho"></span>
-          </div>
-          <a href="../writeSanta/writeSanta.html">
-            <section class="write-btn mt-3">
-              <div>
-                <button
-                  type="submit"
-                  class="button-write mt-3"
-                  onclick="sendLetter()"
-                  disabled
-                  id="buttonWrite"
-                >
-                  <!--sendLetter 함수 안에 js로  페이지 이동 구현 -->
-                  편지 보내기
-                </button>
-              </div>
-            </section>
-          </a>
-        </form>
+        </section>
+
+        <!-- </form> -->
         <footer>
           <p>Dear.Santa</p>
           <span>&copy; 2022 Name all rights reserved</span>

@@ -68,4 +68,3 @@ async function handleLogin(){
         alert(response.status)
     }
 }
-

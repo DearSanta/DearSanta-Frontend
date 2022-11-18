@@ -6,13 +6,16 @@ const backend_base_url = "http://15.164.132.25:8000";
 const fwInformName = () => {
   const emailAddress = localStorage.getItem("email");
   const URL = `${backend_base_url}/accounts/find/password?email=${emailAddress}`;
+  const access_token = localStorage.getItem("access_token");
 
-  fetch(URL)
+  fetch(URL, {
+    headers:{
+      "Authorization" : `Bearer ${access_token}`,
+    }
+  })
     .then((response) => response.json())
     .then((data) => {
-      var name = data;
-      const fwInformName = document.getElementById("fwInformName");
-      fwInformName.innerText = `${name} 님의 유저네임,비밀번호는`; //?
+      var data = data;
       const informFw = document.getElementById("informFw");
       informFw.innerText = data;
 
@@ -26,8 +29,24 @@ const fwInformName = () => {
       });
     });
 };
-// fwInformName();
+fwInformName();
 
+const userName = () => {
+  const URL = `${backend_base_url}/accounts/info`;
+  const access_token = localStorage.getItem("access_token");
+
+  fetch(URL, {
+    headers:{
+      "Authorization" : `Bearer ${access_token}`,
+    }
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const fwInformName = document.getElementById("fwInformName");
+      fwInformName.innerText = `${data.user_name} 님의 유저네임,비밀번호는`;
+    });
+};
+userName();
 // const informFw = () => {
 //   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 

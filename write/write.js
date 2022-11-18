@@ -37,22 +37,22 @@ $(document).ready(function () {
 
 // 편지보내기 fetch
 
-function sendLetter() {
+async function sendLetter() {
   const access_token = localStorage.getItem("access_token");
 
   const data = {
-    content: document.getElementById("inputText"),
+    content: document.getElementById("inputText").value,
   };
 
-  const response = fetch(`${backend_base_url}/letter/write`, {
+  const response = await fetch(`${backend_base_url}/letter/write`, {
     headers: {
       Accept: "application/json",
       "Content-type": "application/json",
-      Authorization: `Bearer ${access_token}`,
+      "Authorization": `Bearer ${access_token}`,
     },
     method: "POST",
     body: JSON.stringify(data),
-  });
+  })
 
   if (response.status == 200) {
     window.location.replace(`${frontend_base_url}/flow/Loading.html`);
@@ -63,8 +63,13 @@ function sendLetter() {
 
 const fromWho = () => {
   const URL = `${backend_base_url}/accounts/info`;
+  const access_token = localStorage.getItem("access_token");
 
-  fetch(URL)
+  fetch(URL, {
+    headers: {
+      "Authorization": `Bearer ${access_token}`,
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
       var data = data;
