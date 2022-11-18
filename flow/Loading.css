@@ -1,0 +1,154 @@
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+body{
+    background-color: #050524;
+    margin:0;
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+.upper{
+   text-align: center;
+}
+.up_logo{
+    width: 35%;
+    margin-top: 5%;
+    
+    
+}
+
+.profile_logo{
+    float: right;
+    margin-top: -5.5%;
+    margin-right: 5%; 
+}
+
+.upper_star{
+    width:100%;
+    display:flex;
+    
+}
+.one_star{
+    width:5%;
+    height: 5%;
+    margin-left:5%;
+   
+}
+.two_star{
+    margin-top: 30%;
+    width:10%;
+    height: 10%;
+}
+.three_star{
+    width:5%;
+    height: 5%;
+    margin-left:19%;
+    margin-top: 8%;
+}
+.four_star{
+    width:6%;
+    height: 6%;
+    margin-left: 16%;
+    margin-top:20%;
+}
+.five_star{
+    width:6%;
+    height: 6%;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.six_star{
+    width:7%;
+    height: 7%;
+    margin-left:7%;
+    margin-top: 35%;
+}
+
+#mid{
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    color:white;
+    padding: 4%;
+   
+}
+.mid_text{
+    color:white;
+}
+
+.lower_star{
+    display: flex;
+    margin-top:20%;
+}
+
+.low_one_star{
+    width:5%;
+    height: 5%;
+    margin-left: 5%;
+}
+
+.low_two_star{
+    width:10%;
+    height:10%;
+    margin-left: 10%;
+    margin-top: 30%;
+}
+
+.low_three_star{
+    width:8%;
+    height:8%;
+    margin-left: 40%;
+    margin-top: 8%;
+}
+
+.low_four_star{
+    width:5%;
+    height: 5%;
+    margin-left: 10%;
+    margin-top: 35%;
+}
+
+.lower{
+    display: flex;
+    margin-top:-7.3%;
+   
+}
+
+.santa_no_head{
+    margin-left: 33%;
+    z-index: 3;
+}
+.foot{
+    display: flex;
+}
+.snow{
+    margin-top:-8%;
+    position:relative;
+    width: 100%;
+    z-index:0;
+}
+
+
+.snow{
+    width:100%;
+   
+}
+footer{
+    width:100%;
+    display: flex;
+}
+.foot_logo{
+    width:100%;
+    
+}
+
+.mid_t{
+   width:100%;
+   position: fixed;
+}

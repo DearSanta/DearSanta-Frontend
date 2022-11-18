@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Get_letter.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        var obTimeOut; // clearTimeout() 함수를 이용하여 Timeout 을 취소하기위해 사용됨
+        var ObjectArray = new Array ();
+        ObjectArray[1] = "./img/santa_move1.svg";
+        ObjectArray[2] = "./img/santa_move2.svg";
+        ObjectArray[3] = "./img/santa_move3.svg";
+        var nObjectCnt = 0;	
+        function ShowDefaultRotate() 
+        {
+            nObjectCnt++;
+            if( nObjectCnt < ObjectArray.length )  
+            {
+                document.getElementById("mid").style.display="none";
+                document.getElementById("mid_img").src = ObjectArray[nObjectCnt];
+                document.getElementById("mid_img").style.display='flex';
+                document.getElementById("mid_img").style.marginLeft='0%';
+                obTimeOut = setTimeout("ShowDefaultRotate()",1000); 
+            }
+            else
+            {
+                clearTimeout(obTimeOut);
+            }		
+        }
+        function startAnimation()
+        {
+            obTimeOut = window.setTimeout(ShowDefaultRotate,4000);
+        }
+        window.onload = startAnimation;
+    </script>
+
+</head>
+<body>
+    
+    <div class="upper">
+        <img class="up_logo" src="./img/logo.png" alt="로고이미지">
+    </div>
+    <div class="profile">
+        <img class="profile_logo" src="./img/profile.png" alt="플필이미지">
+    </div>
+
+    <div class="upper_star">
+        <img id="move1" class="one_star" src="./img/star.png">
+        <img id="move2" class="two_star" src="./img/star.png">
+        <img id="move1" class="three_star" src="./img/star.png">
+        <img id="move2" class="four_star" src="./img/star.png">
+        <img id="move1" class="five_star" src="./img/star.png">
+        <img id="move2" class="six_star" src="./img/star.png">
+    </div>
+
+    <div class="mid_t">
+        <div id="mid">크리스마스가 되었어요 !</div>
+    </div>
+    <div class="lower_star">
+        <img class="low_one_star" src="./img/star.png">
+        <img class="low_two_star" src="./img/star.png">
+        <img class="low_three_star" src="./img/star.png">
+        <img class="low_four_star" src="./img/star.png">
+    </div>
+
+    <div class="lower">
+       <img id="mid_img" class="celender" src="./img/25day.svg">
+    </div>
+
+    <div class="lo">
+        <div class="low_img">
+            <img class="object1" src="./img/tree.png">
+            <img class="object2" src="./img/snowman.png">
+            <img class="object3" src="./img/sock.svg">
+            <img class="object4" src="./img/cookie.svg">
+            <img class="object5" src="./img/tree.png">
+            <img class="object6" src="./img/tree.png">
+        </div>
+
+        <div class="foot">
+            <img class="snow" src="./img/snow.png">
+        </div>
+
+        <footer>
+            <img class="foot_logo" src="./img/footer.png">
+        </footer>
+    </div>
+</body>
+</html>
