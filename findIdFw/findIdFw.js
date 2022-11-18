@@ -1,7 +1,7 @@
 /**api token code */
-const frondend_base_url = "http://127.0.0.1:5500";
+const frontend_base_url = "http://127.0.0.1:5500";
 /**backend url */
-const backend_base_url = "http://15.164.132.25:8080";
+const backend_base_url = "http://15.164.132.25:8000";
 
 $(document).ready(function () {
   // 대상 textarea  이벤트 keyup
@@ -66,7 +66,7 @@ btn.addEventListener("button", function () {
   localStorage.setItem("email", emailAddress);
 
   if (response.status == 200) {
-    window.location.replace(`${frondend_base_url}/fwInform.html`);
+    window.location.replace(`${frontend_base_url}/fwInform.html`);
   } else {
     alert(response.status);
   }

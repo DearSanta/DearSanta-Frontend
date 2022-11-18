@@ -1,7 +1,7 @@
 /**api token code */
-const frondend_base_url = "http://127.0.0.1:5500"
+const frontend_base_url = "http://127.0.0.1:5500"
 /**backend url */
-const backend_base_url = "http://15.164.132.25:8080"
+const backend_base_url = "http://15.164.132.25:8000"
 
 async function handleSignin(){
 
@@ -22,10 +22,10 @@ async function handleSignin(){
     }
     )
 
-    response_json = await response.json()
+    // response_json = await response.json()
 
     if(response.status == 200){
-        window.location.replace(`${frondend_base_url}/login.html`);
+        window.location.replace(`${frontend_base_url}/account/login.html`);
     }else{
         alert(response.status)
     }
@@ -38,7 +38,7 @@ async function handleLogin(){
         password : document.getElementById("pwd").value
     }
 
-    const response = await fetch(`${backend_base_url}/account/login`,{
+    const response = await fetch(`${backend_base_url}/accounts/login`,{
         headers:{
             Accept:"application/json",
                 'Content-type' : 'application/json' 
@@ -52,7 +52,7 @@ async function handleLogin(){
 
 
     if(response.status == 200){
-        localStorage.setItem("access_token", response_json.access)
+        localStorage.setItem("access_token", response_json.access_token)
         // localStorage.setItem("refresh_token", response_json.access)
 
         /**데이터 파싱 */
@@ -63,7 +63,7 @@ async function handleLogin(){
         }).join(''));
 
         localStorage.setItem("payload", jsonPayload);
-        widow.location.replace(`${frontend_base_url}/flow/flow.html`); //로그인 후 사이트 연결 확인 필요
+        window.location.replace(`${frontend_base_url}/flow/flow.html`); //로그인 후 사이트 연결 확인 필요
     }else{ //로그인 실패 구현 필요
         alert(response.status)
     }

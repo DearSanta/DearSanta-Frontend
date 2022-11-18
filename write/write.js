@@ -1,7 +1,7 @@
 /**api token code */
-const frondend_base_url = "http://127.0.0.1:5500";
+const frontend_base_url = "http://127.0.0.1:5500";
 /**backend url */
-const backend_base_url = "http://15.164.132.25:8080";
+const backend_base_url = "http://15.164.132.25:8000";
 
 $(document).ready(function () {
   // 대상 textarea  이벤트 keyup
@@ -38,30 +38,47 @@ $(document).ready(function () {
 // 편지보내기 fetch
 
 function sendLetter() {
-  const form = document.getElementById("writeLetterForm");
+  
+  const access_token = localStorage.getItem("access_token");
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  const data = {
+    content: document.getElementById("inputText"),
+  };
 
-    const formData = new FormData(form);
-    const payload = new URLSearchParams(formData);
-    const access_token = localStorage.getItem("access_token"); //토큰 가져오기
-
-    fetch(`${backend_base_url}/letter/write`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        Authorization: `Bearer ${access_token}`, //Authorization 따옴표 묶어야함.
-      },
-      body: payload,
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
+  const response = fetch(`${backend_base_url}/letter/write`, {
+    headers: {
+      Accept: "application/json",
+      "Content-type": "application/json",
+      'Authorization': `Bearer ${access_token}`,
+    },
+    method: "POST",
+    body: JSON.stringify(data),
   });
 
   if (response.status == 200) {
-    window.location.replace(`${frondend_base_url}/Loading.html`);
+    window.location.replace(`${frontend_base_url}/flow/Loading.html`);
   } else {
     alert(response.status);
   }
 }
+
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+
+//   // const formData = new FormData(form);
+//   // const payload = new URLSearchParams(formData);
+//   const access_token = localStorage.getItem("access_token"); //토큰 가져오기
+
+//   fetch(`${backend_base_url}/letter/write`, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/x-www-form-urlencoded",
+//       "Authorization": `Bearer ${access_token}`, //Authorization 따옴표 묶어야함.
+//     },
+//     body: JSON.stringify({
+//       content: "test"
+//     }),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => console.log(data));
+// });
