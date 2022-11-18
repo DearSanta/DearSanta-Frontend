@@ -23,6 +23,7 @@
                 document.getElementById("mid_img").src = ObjectArray[nObjectCnt];
                 document.getElementById("mid_img").style.display='flex';
                 document.getElementById("mid_img").style.marginLeft='0%';
+                document.getElementById("md").style.height='38px';
                 obTimeOut = setTimeout("ShowDefaultRotate()",1000); 
             }
             else
@@ -39,13 +40,12 @@
 
 </head>
 <body>
-    
+    <div class="all_i_want">
     <div class="upper">
         <img class="up_logo" src="./img/logo.png" alt="로고이미지">
-    </div>
-    <div class="profile">
         <img class="profile_logo" src="./img/profile.png" alt="플필이미지">
     </div>
+   
 
     <div class="upper_star">
         <img id="move1" class="one_star" src="./img/star.png">
@@ -56,7 +56,7 @@
         <img id="move2" class="six_star" src="./img/star.png">
     </div>
 
-    <div class="mid_t">
+    <div id="md" class="mid_t">
         <div id="mid">크리스마스가 되었어요 !</div>
     </div>
     <div class="lower_star">
@@ -80,13 +80,16 @@
             <img class="object6" src="./img/tree.png">
         </div>
 
-        <div class="foot">
-            <img class="snow" src="./img/snow.png">
-        </div>
+        <div class="fo">
+            <div class="foot">
+                <img class="snow" src="./img/snow.png">
+            </div>
 
-        <footer>
-            <img class="foot_logo" src="./img/footer.png">
-        </footer>
+            <footer>
+                <img class="foot_logo" src="./img/footer.png">
+            </footer>
+        </div>
+    </div>
     </div>
 </body>
 </html>
