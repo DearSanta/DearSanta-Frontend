@@ -13,7 +13,15 @@
 </head>
 
 <style>
-    body {
+    body{
+        margin: 0 auto;
+    }
+
+    .content {
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 390px;
+        height: 844px;
         background-color: #FFE2A9;
     }
 
@@ -26,8 +34,8 @@
         position: absolute;
         width: 272px;
         height: 75px;
-        left: 59px;
-        top: 120px;
+        margin-left: 59px;
+        margin-top: 120px;
 
         font-family: 'Pangolin';
         font-style: normal;
@@ -45,8 +53,8 @@
         position: absolute;
         width: 177px;
         height: 18px;
-        left: 106px;
-        top: 202px;
+        margin-left: 106px;
+        margin-top: 202px;
 
         font-family: 'NexonLv1Gothic';
         font-weight: 400;
@@ -61,16 +69,16 @@
         position: absolute;
         width: 103px;
         height: 60px;
-        left: 143px;
-        top: 243px;
+        margin-left: 143px;
+        margin-top: 243px;
     }
 
     #name {
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 325px;
+        margin-left: 23px;
+        margin-top: 325px;
         border-radius: 100px;
         border-style: hidden;
 
@@ -81,8 +89,8 @@
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 388px;
+        margin-left: 23px;
+        margin-top: 388px;
         border-radius: 100px;
         border-style: hidden;
 
@@ -93,8 +101,8 @@
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 451px;
+        margin-left: 23px;
+        margin-top: 451px;
         border-radius: 100px;
         border-style: hidden;
 
@@ -105,8 +113,8 @@
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 514px;
+        margin-left: 23px;
+        margin-top: 514px;
         border-radius: 100px;
         border-style: hidden;
 
@@ -140,8 +148,8 @@
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 621px;
+        margin-left: 23px;
+        margin-top: 621px;
         letter-spacing: 0.05em;
     }
 
@@ -154,8 +162,8 @@
         position: absolute;
         width: 155px;
         height: 13px;
-        left: 53px;
-        top: 571px;
+        margin-left: 53px;
+        margin-top: 571px;
 
         font-family: 'NexonLv1Gothic';
         font-style: normal;
@@ -172,42 +180,36 @@
 </style>
 
 <body>
-    <div id = content>
-        <div>
-            <div id="Title">
-                D<a style="color: #FA4E28
+    <div class=content>
+        <div id="Title">
+            D<a style="color: #FA4E28
                 ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">.
-                    Santa</a>
-            </div>
-            <div id="Sub_Title">서로의 산타가 되어보아요</div>
-
-            <div id="leaf">
-                <image src="../Image/leaf 1.svg"></image>
-            </div>
+                Santa</a>
         </div>
-
-        <div>
-            <form class=info_box>
-                <div>
-                    <input type="text" id="name" placeholder="닉네임을 입력하세요">
-                </div>
-                <div>
-                    <input type="text" id="id" placeholder="아이디를 입력하세요">
-                </div>
-                <div>
-                    <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요">
-                </div>
-                <div>
-                    <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
-                    <span id="checkPw"></span>
-                </div>
-
-                <div>
-                    <button type="button" id=join_submitbtn onclick="handleSignin()" disabled>확인</button>
-                </div>
-            </form>
+        <div id="Sub_Title">서로의 산타가 되어보아요</div>
+        <div id="leaf">
+            <image src="../Image/leaf 1.svg"></image>
         </div>
+        <form class=info_box>
+            <div>
+                <input type="text" id="name" placeholder="닉네임을 입력하세요">
+            </div>
+            <div>
+                <input type="text" id="id" placeholder="아이디를 입력하세요">
+            </div>
+            <div>
+                <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요">
+            </div>
+            <div>
+                <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
+                <span id="checkPw"></span>
+            </div>
+            <div>
+                <button type="button" id=join_submitbtn onclick="handleSignin()" disabled>확인</button>
+            </div>
+        </form>
     </div>
+
     <script src="../account/jscode/join_btn.js"></script>
     <script async src="../account/jscode/api.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

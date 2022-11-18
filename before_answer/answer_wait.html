@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-    <meta
-      name="viewport"
-      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
-    />
+    <meta name="viewport"
+        content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
     <link href='https://fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <title>편지쓰기</title>
@@ -21,46 +20,46 @@
         font-style: normal;
     }
 
-    body{
+    body {
+        margin: 0 auto;
+    }
+
+    .content {
+        margin: 0 auto;
+        padding: 0 auto;
+        width: 390px;
+        height: 844px;
         background-color: #FFE2A9;
     }
 
-    #header{
+    .Title {
+        font-family: 'Pangolin';
+        font-style: normal;
+        text-align: center;
+        font-size: 25px;
+
         position: absolute;
-        width: 390px;
-        height: 104px;
-        left: 0px;
-        top: 0px;
+        width: 125.65px;
+        height: 20.33px;
+        margin-left: 132px;
+        margin-top: 52px;
+        color: #3EAD17;
     }
 
-    .Title{
-       font-family: 'Pangolin';
-       font-style: normal;
-       text-align: center;
-       font-size: 25px;
-
-       position: absolute;
-       width: 125.65px;
-       height: 20.33px;
-       left: 132px;
-       top: 52px;
-       color: #3EAD17;
-   }
-
-    .my_page{
+    .my_page {
         position: absolute;
         width: 20px;
         height: 20px;
-        left: 350px;
-        top: 54px;
+        margin-left: 350px;
+        margin-top: 54px;
     }
 
-    #main_text{
+    #main_text {
         position: absolute;
         width: 147px;
         height: 65px;
-        left: 122px;
-        top: 138px;
+        margin-left: 122px;
+        margin-top: 138px;
 
         font-family: 'Pangolin';
         font-style: normal;
@@ -71,12 +70,12 @@
         color: #FFB422;
     }
 
-    #sub_text{
+    #sub_text {
         position: absolute;
         width: 227px;
         height: 21px;
-        left: 93px;
-        top: 233px;
+        margin-left: 93px;
+        margin-top: 233px;
 
         font-family: 'NexonLv1Gothic';
         font-style: normal;
@@ -90,15 +89,15 @@
         color: #0A0A0A;
     }
 
-    #Santa_face{
+    #Santa_face {
         position: absolute;
         width: 150px;
         height: 227px;
-        left: 105px;
-        top: 360px;
+        margin-left: 105px;
+        margin-top: 360px;
     }
 
-    .submit{
+    .submit {
         color: #FAFAFA;
         background-color: #4D2E27;
         border-radius: 100px;
@@ -115,29 +114,29 @@
         position: absolute;
         width: 344px;
         height: 47px;
-        left: 23px;
-        top: 650px;
+        margin-left: 23px;
+        margin-top: 650px;
     }
 
-    #footer{
+    #footer {
         position: absolute;
         width: 390px;
         height: 157px;
-        left: 0px;
-        top: 800px;
+        margin-left: 0px;
+        margin-top: 800px;
 
         background: #FFE2A9;
     }
 
-    #footer_box{
+    #footer_box {
         position: absolute;
         width: 216px;
         height: 63px;
-        left: 30px;
-        top: 30px;
+        margin-left: 30px;
+        margin-top: 30px;
     }
 
-    #main_footer{
+    #main_footer {
         position: absolute;
         width: 85px;
         height: 20px;
@@ -154,7 +153,7 @@
         color: #4D2E27;
     }
 
-    #sub_footer{
+    #sub_footer {
         position: absolute;
         width: 211px;
         height: 40px;
@@ -171,17 +170,19 @@
 
         color: #4D2E27;
     }
-
 </style>
-<body>
-    <section id = header>
-        <div class = "Title">D<a style="color: #FA4E28
-            ">e</a><a style="color:#FFA800;">a</a><a style = "color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a></div>
-        <div class = "my_page"><image src = "../Image/profile.png"></image></div>
-    </section>
 
-    <section>
-        <div id = main_text>wait!</div>
+<body>
+    <div class=content>
+        <div class="Title">D<a style="color: #FA4E28
+            ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
+        </div>
+        <div class="my_page">
+            <image src="../Image/profile.png"></image>
+        </div>
+
+
+        <div id=main_text>wait!</div>
         <div id="sub_text">
             잠시 산타가 되어서
             <br>
@@ -190,23 +191,24 @@
             따듯한 한마디를 남겨주세요 !
         </div>
 
-        <div id = "Santa_face">
+        <div id="Santa_face">
             <image src="../Image/santa with black glasses 1.png"></image>
         </div>
-    </section>
-    
-    <form>
-        <div>
-            <a href = "../writeSanta/writeSanta.html"><input type="button" value="확인" class= "submit">
-            </a>
-        </div>
-    </form>
+
+        <form>
+            <div>
+                <a href="../writeSanta/writeSanta.html"><input type="button" value="확인" class="submit">
+                </a>
+            </div>
+        </form>
+        <footer id=footer>
+            <section id=footer_box>
+                <div id='main_footer'>Dear.Santa</div>
+                <div id="sub_footer">© 2022 Name all right reserved.
+                    Contact email@email.com</div>
+            </section>
+        </footer>
+    </div>
 </body>
-<footer id = footer>
-    <section id = footer_box>
-        <div id = 'main_footer'>Dear.Santa</div>
-        <div id = "sub_footer">© 2022 Name all right reserved.
-        Contact email@email.com</div>
-    </section>
-</footer>
+
 </html>
