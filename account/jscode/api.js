@@ -63,8 +63,8 @@ async function handleLogin(){
         }).join(''));
 
         localStorage.setItem("payload", jsonPayload);
-        widow.location.replace(`${frontend_base_url}/`); //로그인 후 사이트 연결 필요
-    }else{
+        widow.location.replace(`${frontend_base_url}/flow/flow.html`); //로그인 후 사이트 연결 확인 필요
+    }else{ //로그인 실패 구현 필요
         alert(response.status)
     }
 }
