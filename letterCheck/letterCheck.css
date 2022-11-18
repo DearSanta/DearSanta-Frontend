@@ -3,6 +3,8 @@
 
 .contentWrap {
   height: 1258px;
+  letter-spacing: 5%;
+  line-height: 25px;
 }
 
 #writeSantaLetter {

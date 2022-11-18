@@ -25,6 +25,8 @@
   padding: 20px;
 
   font-family: "NEXON Lv1 Gothic OTF";
+  letter-spacing: 5%;
+  line-height: 25px;
 }
 
 #FindpageLogo {
@@ -39,24 +41,28 @@
 
 #fwInformContent p {
   font-weight: 900;
-  margin-top: 5px;
+  margin-top: 10px;
+  letter-spacing: 5%;
 }
 
 #fwInformBox textarea {
   width: 340px;
   height: 81px;
   padding: 20px;
+  padding-top: 28px;
 
   background-color: #ffcb66;
   color: #0a0a0a;
   border-radius: 20px;
   font-size: larger;
+  font-weight: lighter;
 
   border: none;
   outline: none;
   resize: none;
 
   text-align: center;
+  vertical-align: middle;
 }
 
 .write-btn {
@@ -68,7 +74,8 @@
   width: 344px;
   height: 47px;
 
-  font-size: auto;
+  text-rendering: optimizeSpeed;
+  letter-spacing: 5%;
   font-weight: 700;
   border: none;
   border-radius: 50px;
@@ -76,7 +83,6 @@
   color: #fafafa;
 
   cursor: pointer;
-  /* box-shadow: 5px 3px 3px rgb(82, 82, 82); */
 }
 /* .button-write:hover {
         background-color: #4d2e27e8;
