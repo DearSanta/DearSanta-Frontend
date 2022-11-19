@@ -46,7 +46,7 @@
         color: #3EAD17;
     }
 
-    .my_page {
+    .Logout {
         position: absolute;
         width: 20px;
         height: 20px;
@@ -170,6 +170,12 @@
 
         color: #4D2E27;
     }
+
+    #endPageLogout {
+        background-color: #ffe2a9;
+        border: none;
+        outline: none;
+    }
 </style>
 
 <body>
@@ -177,8 +183,10 @@
         <div class="Title">D<a style="color: #FA4E28
             ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
         </div>
-        <div class="my_page">
-            <image src="../Image/profile.png"></image>
+        <div class="Logout">
+            <button id="endPageLogout" onclick="handleLogout()">
+                <image src="../Image/logout.svg"></image>
+            </button>
         </div>
 
 
@@ -209,6 +217,7 @@
             </section>
         </footer>
     </div>
+    <script src="../account/jscode/api.js"></script>
 </body>
 
 </html>
