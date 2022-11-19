@@ -24,7 +24,7 @@ const dearWho_Santa = () => {
 
   fetch(URL, {
     headers: {
-      Authorization: `Bearer ${access_token}`,
+      "Authorization": `Bearer ${access_token}`,
     },
   })
     .then((response) => response.json())
@@ -37,7 +37,7 @@ const dearWho_Santa = () => {
 dearWho_Santa();
 
 const fromWho_Santa = () => {
-  const URL = `${backend_base_url}/letter/any`;
+  const URL = `${backend_base_url}/letter/any`; // 안됨 서버 500 error
   const access_token = localStorage.getItem("access_token");
 
   fetch(URL, {
@@ -49,8 +49,8 @@ const fromWho_Santa = () => {
     .then((data) => {
       var data = data;
       const fromWhoSanta = document.getElementById("fromWhoSanta");
-      fromWhoSanta.innerText = data.writer;
       const inputBox = document.getElementById("userLetterBox");
+      fromWhoSanta.innerText = data.writer;
       inputBox.innerText = data.content;
     });
 };

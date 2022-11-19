@@ -37,6 +37,10 @@ $(document).ready(function () {
 
 // 편지보내기 fetch
 
+//편지 내용 로컬스토리지에 담았다가 편지확인페이지에 넣어주기 용도
+const Text = document.getElementById("inputText");
+const writeText = localStorage.setItem("writeText",Text);
+
 async function sendLetter() {
   const access_token = localStorage.getItem("access_token");
 

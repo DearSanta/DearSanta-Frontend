@@ -2,8 +2,6 @@
 const frontend_base_url = "http://127.0.0.1:5500";
 /**backend url */
 
-//수정필요 데이더 넣기
-
 const backend_base_url = "http://15.164.132.25:8000";
 
 const LetterBox = () => {
@@ -17,28 +15,51 @@ const LetterBox = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      var data = data;
+      var data = data[0];
+      console.log(data);
       const inputBox = document.getElementById("myLetterBox");
+      const fromWhoCheck = document.getElementById("fromWhoCheck");
+      fromWhoCheck.innerText = data.letter.from;
+      inputBox.innerText = data.letter.content;
+  
+      const answerBox = document.getElementById("answeredLetterBox");
       const dearWhoCheck = document.getElementById("dearWhoCheck");
       dearWhoCheck.innerText = data.answer.dear;
-      inputBox.innerText = data.letter.content;
-
-      const fromWhoCheck = document.getElementById("fromWhoCheck");
-      const answerBox = document.getElementById("answeredLetterBox");
-      fromWhoCheck.innerText = data.letter.from;
       answerBox.innerText = data.answer.content;
     });
-  const btn = document.getElementById("buttonCheckpage");
-  btn.addEventListener("button", function () {
-    if (response.status == 200) {
-      window.location.replace(`${frontend_base_url}/`); //경로?
-    } else {
-      alert(response.status);
-    }
-  });
+    // const fromWho = () => {
+    //   const URL = `${backend_base_url}/accounts/info`;
+    //   const access_token = localStorage.getItem("access_token");
+    
+    //   fetch(URL, {
+    //     headers: {
+    //       "Authorization": `Bearer ${access_token}`,
+    //     },
+    //   })
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //       var data = data;
+    //       const dearWhoSanta = document.getElementById("fromWhoCheck");
+    //       dearWhoSanta.innerText = data.user_name;
+    //     });
+    // };
+    // fromWho();
+
+
+  // const btn = document.getElementById("buttonCheckpage");
+  // btn.addEventListener("button", function () {
+  //   if (response.status == 200) {
+  //     window.location.replace(`${frontend_base_url}/account/login_main.html`); //경로?
+  //   } else {
+  //     alert(response.status);
+  //   }
+  // });
 };
 LetterBox();
 
+function goLoginMain(){
+  window.location.replace(`${frontend_base_url}/account/login_main.html`); //경로?
+}
 // const answeredLetterBox = () => {
 //   const URL = "https://jsonplaceholder.typicode.com/posts/1";
 
