@@ -8,21 +8,45 @@
     <title>처음시작플로우</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+        /**api token code */
+        const frontend_base_url = "http://127.0.0.1:5500";
+        /**backend url */
+        const backend_base_url = "http://15.164.132.25:8000";
         
-        const str1='안녕하세요 김태영님을 기다렸어요 !'
-        const str2='이번 크리스마스에는\n산타 할아버지가 편지에 답장해주신데요'
-        const str3='편지를 써볼까요?'
-        var text=[`안녕하세요 
-                  김태영님을 기다렸어요 !`,
-                  `이번 크리스마스에는
-                  산타 할아버지가 편지에 답장해주신데요`,
-                  `편지를 써볼까요?`]
+
         function callMe(){
-        var myText = document.getElementById('mid');
-        var curIdx = text.indexOf(mid.innerHTML);
-        myText.innerHTML = text[(curIdx+1)%text.length];
-        }
-        setInterval(callMe,4000);
+        const URL = `${backend_base_url}/accounts/info`;
+        const access_token = localStorage.getItem("access_token");
+
+        fetch(URL, {
+            headers: {
+            "Authorization": `Bearer ${access_token}`,
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+            var data = data;
+            
+          
+            
+            const str1 =`안녕하세요 \n${data.user_name}님을 기다렸어요 !`
+            const str2 ='이번 크리스마스에 \n 산타할아버지가 편지에 답장해주신데요';
+            var text = [str1,
+                  str2,
+                  `편지를 써볼까요?`]
+
+            
+                    var myText = document.getElementById('mid');
+                    var curIdx = text.indexOf(mid.innerHTML);
+                    myText.innerHTML = text[(curIdx+1)%text.length];
+                    
+                   
+            });
+        };
+      
+        setInterval(callMe,3000);
+        
+        
         
         function window_onload() {
             setTimeout('goPage()',15000)
@@ -32,7 +56,7 @@
             location.href="../before_answer/answer_first.html?id=<%=id%>"
 
         }
-
+       
 
 
     </script>
@@ -57,7 +81,7 @@
         </div>
 
         <div class="mid_t">
-            <div id="mid"></div>
+            <span id="mid"></span>
         </div>
         <div class="lower_star">
             <img class="low_one_star" src="./img/star.png">
