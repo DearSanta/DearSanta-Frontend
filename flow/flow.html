@@ -40,15 +40,13 @@
                     var myText = document.getElementById('mid');
                     var curIdx = text.indexOf(mid.innerHTML);
                     myText.innerHTML = text[(curIdx+1)%text.length];
-                    
-                   
             });
         };
       
         setInterval(callMe,3000);
         
         function window_onload() {
-            setTimeout('goPage()',11000)
+            setTimeout('goPage()',60000)
         }
 
         function goPage() {
