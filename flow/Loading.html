@@ -1,66 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Loading.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Loading.css" />
     <title>내 편지 작성후 화면</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-         function window_onload() {
-            setTimeout('goPage()',3000)
-        }
+      function window_onload() {
+        setTimeout("goPage()", 4000);
+      }
 
-        function goPage() {
-            location.href="../before_answer/answer_wait.html?id=<%=id%>"
-
-        }
+      function goPage() {
+        location.href = "../before_answer/answer_wait.html?id=<%=id%>";
+      }
     </script>
-
-</head>
-<body onload="javascript:window_onload()">
+  </head>
+  <body onload="javascript:window_onload()">
     <div class="all_i_want">
-        <div class="upper">
-            <img class="up_logo" src="./img/logo.png" alt="로고이미지">
-            <img class="profile_logo" src="./img/profile.png" alt="플필이미지">
-        </div>
-    
+      <div class="upper">
+        <img class="up_logo" src="./img/logo.png" alt="로고이미지" />
+        <img class="profile_logo" src="./img/profile.png" alt="플필이미지" />
+      </div>
 
-        <div class="upper_star">
-            <img id="move1" class="one_star" src="./img/star.png">
-            <img id="move2" class="two_star" src="./img/star.png">
-            <img id="move1" class="three_star" src="./img/star.png">
-            <img id="move2" class="four_star" src="./img/star.png">
-            <img id="move1" class="five_star" src="./img/star.png">
-            <img id="move2" class="six_star" src="./img/star.png">
-        </div>
+      <div class="upper_star">
+        <img id="move1" class="one_star" src="./img/star.png" />
+        <img id="move2" class="two_star" src="./img/star.png" />
+        <img id="move1" class="three_star" src="./img/star.png" />
+        <img id="move2" class="four_star" src="./img/star.png" />
+        <img id="move1" class="five_star" src="./img/star.png" />
+        <img id="move2" class="six_star" src="./img/star.png" />
+      </div>
 
-        <div class="mid_t">
-            <div id="mid">편지가 산타에게 전달되었어요 !</div>
-        </div>
-        <div class="lower_star">
-            <img class="low_one_star" src="./img/star.png">
-            <img class="low_two_star" src="./img/star.png">
-            <img class="low_three_star" src="./img/star.png">
-            <img class="low_four_star" src="./img/star.png">
-        </div>
+      <div class="mid_t">
+        <div id="mid">편지가 산타에게 전달되었어요 !</div>
+      </div>
+      <div class="lower_star">
+        <img class="low_one_star" src="./img/star.png" />
+        <img class="low_two_star" src="./img/star.png" />
+        <img class="low_three_star" src="./img/star.png" />
+        <img class="low_four_star" src="./img/star.png" />
+      </div>
 
-        <div class="lo">
-            <div class="lower">
-                <img class="santa_no_head" src="./img/santanohead.svg">
-                </div>
-            <div class="fo">
-
-                <div class="foot">
-                    <img class="snow" src="./img/bigsnow.svg">
-                </div>
-
-                <footer>
-                    <img class="foot_logo" src="./img/footer.png">
-                </footer>
-            </div>
+      <div class="lo">
+        <div class="lower">
+          <img class="santa_no_head" src="./img/santanohead.svg" />
         </div>
+        <div class="fo">
+          <div class="foot">
+            <img class="snow" src="./img/bigsnow.svg" />
+          </div>
+
+          <footer>
+            <img class="foot_logo" src="./img/footer.png" />
+          </footer>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

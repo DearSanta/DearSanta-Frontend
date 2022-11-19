@@ -15,7 +15,7 @@ const LetterBox = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      var data = data[0];
+      var data = data[0];  
       console.log(data);
       const inputBox = document.getElementById("myLetterBox");
       const fromWhoCheck = document.getElementById("fromWhoCheck");
