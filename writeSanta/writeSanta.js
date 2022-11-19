@@ -19,7 +19,7 @@ const backend_base_url = "http://15.164.132.25:8000";
 // userLetterBox();
 
 const dearWho_Santa = () => {
-  const URL = `${backend_base_url}/accounts/info`;
+  const URL = `${backend_base_url}/letter/any`;
   const access_token = localStorage.getItem("access_token");
 
   fetch(URL, {
@@ -31,30 +31,34 @@ const dearWho_Santa = () => {
     .then((data) => {
       var data = data;
       const dearWhoSanta = document.getElementById("dearWhoSanta");
-      dearWhoSanta.innerText = data.user_name;
-    });
-};
-dearWho_Santa();
-
-const fromWho_Santa = () => {
-  const URL = `${backend_base_url}/letter/any`; // 안됨 서버 500 error
-  const access_token = localStorage.getItem("access_token");
-
-  fetch(URL, {
-    headers: {
-      "Authorization": `Bearer ${access_token}`,
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      var data = data;
       const fromWhoSanta = document.getElementById("fromWhoSanta");
       const inputBox = document.getElementById("userLetterBox");
+      dearWhoSanta.innerText = data.writer;
       fromWhoSanta.innerText = data.writer;
       inputBox.innerText = data.content;
     });
 };
-fromWho_Santa();
+dearWho_Santa();
+
+// const fromWho_Santa = () => {
+//   const URL = `${backend_base_url}/letter/any`; // 안됨 서버 500 error
+//   const access_token = localStorage.getItem("access_token");
+
+//   fetch(URL, {
+//     headers: {
+//       "Authorization": `Bearer ${access_token}`,
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       var data = data;
+//       const fromWhoSanta = document.getElementById("fromWhoSanta");
+//       const inputBox = document.getElementById("userLetterBox");
+//       fromWhoSanta.innerText = data.writer;
+//       inputBox.innerText = data.content;
+//     });
+// };
+// fromWho_Santa();
 // URL, element 뒤 인자(?)들 수정 필요
 
 // function sendLetterAsSanta() {
