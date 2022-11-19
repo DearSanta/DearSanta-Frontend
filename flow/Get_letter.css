@@ -5,7 +5,17 @@
     font-weight: normal;
     font-style: normal;
   }
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
+@keyframes reverse_image{
+    100% {
+        transform: rotate(-360deg);
+    }
+}
 .all_i_want{
     margin: 0 auto;
    
@@ -41,36 +51,41 @@ body{
     width:19px;
     height: 18px;
     margin-left:15px;
-   
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
 }
 .two_star{
     margin-top: 130px;
     width:33px;
     height: 32px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
 }
 .three_star{
     width:17px;
     height: 16px;
     margin-left:80px;
     margin-top: 30px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
 }
 .four_star{
     width:26px;
     height: 25px;
     margin-left: 70px;
     margin-top:100px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
 }
 .five_star{
     width:23px;
     height: 22px;
     margin-top: 15px;
     margin-left: 40px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
 }
 .six_star{
     width:23px;
     height: 22px;
     margin-left:20px;
     margin-top: 150px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
 }
 
 #mid{
@@ -90,6 +105,7 @@ body{
     width:22px;
     height: 21px;
     margin-left: 20px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
 }
 
 .low_two_star{
@@ -97,6 +113,7 @@ body{
     height:32px;
     margin-left: 30px;
     margin-top: 150px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
 }
 
 .low_three_star{
@@ -104,6 +121,7 @@ body{
     height:31px;
     margin-left: 160px;
     margin-top: 30px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
 }
 
 .low_four_star{
@@ -111,6 +129,7 @@ body{
     height: 18px;
     margin-left: 40px;
     margin-top: 160px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
 }
 
 .lower{

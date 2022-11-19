@@ -29,13 +29,14 @@
             
           
             
-            const str1 =`안녕하세요 \n${data.user_name}님을 기다렸어요 !`
-            const str2 ='이번 크리스마스에 \n 산타할아버지가 편지에 답장해주신데요';
-            var text = [str1,
-                  str2,
-                  `편지를 써볼까요?`]
 
-            
+
+            const str1 =`안녕하세요\n\n${data.user_name}님을 기다렸어요 !`
+            const str2 ='이번 크리스마스에\n\n산타할아버지가 편지에 답장해주신데요'
+            const str3 = `편지를 써볼까요?`
+
+            var text = [str1,str2,str3]
+
                     var myText = document.getElementById('mid');
                     var curIdx = text.indexOf(mid.innerHTML);
                     myText.innerHTML = text[(curIdx+1)%text.length];
@@ -46,10 +47,8 @@
       
         setInterval(callMe,3000);
         
-        
-        
         function window_onload() {
-            setTimeout('goPage()',15000)
+            setTimeout('goPage()',11000)
         }
 
         function goPage() {
@@ -57,8 +56,6 @@
 
         }
        
-
-
     </script>
 
 </head>
@@ -80,9 +77,11 @@
             <img id="move2" class="six_star" src="./img/star.png">
         </div>
 
+        
         <div class="mid_t">
             <span id="mid"></span>
         </div>
+        
         <div class="lower_star">
             <img class="low_one_star" src="./img/star.png">
             <img class="low_two_star" src="./img/star.png">
