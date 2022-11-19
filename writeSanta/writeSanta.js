@@ -137,7 +137,7 @@ async function sendLetterAsSanta() {
   });
 
   if (response.status == 200) {
-    window.location.replace(`${frontend_base_url}/flow/Get_letter.html`);
+    window.location.replace(`${frontend_base_url}/check_letter/endpage.html`);
   } else {
     alert(response.status);
   }
