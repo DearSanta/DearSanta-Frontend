@@ -58,7 +58,7 @@ const LetterBox = () => {
 LetterBox();
 
 function goLoginMain(){
-  window.location.replace(`${frontend_base_url}/check_letter/endpage.html`); //경로?
+  window.location.replace(`${frontend_base_url}/account/login_main.html`); //경로?
 }
 // const answeredLetterBox = () => {
 //   const URL = "https://jsonplaceholder.typicode.com/posts/1";

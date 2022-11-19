@@ -78,3 +78,6 @@ async function handleLogin(){
     }
 }
 
+function go24home(){
+    window.location.replace(`${frontend_base_url}/flow/24home.html`);
+}

@@ -204,8 +204,7 @@
 
         <form>
             <div>
-                <a href=""><input type="button" value="확인" class="submit">
-                </a>
+                <input onclick="go24home()" type="button" value="확인" class="submit">
             </div>
         </form>
         <footer id=footer>
@@ -216,18 +215,7 @@
             </section>
         </footer>
     </div>
-    <!-- <script>
-        const logout = document.getElementById("logout");
-        logout.addEventListener('click',function(){
-            async function handleLogout(){
-                localStorage.removeItem("access")
-                localStorage.removeItem("refresh")
-                localStorage.removeItem("payload")
-                alert("로그아웃되었습니다.");
-                widow.location.replace(`${frontend_base_url}/account/login_main.html`);
-            }
-        })
-    </script> -->
+
     <script src="../account/jscode/api.js"></script>
 </body>
 

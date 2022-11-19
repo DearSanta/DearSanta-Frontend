@@ -59,7 +59,7 @@ async function sendLetter() {
   })
 
   if (response.status == 200) {
-    window.location.replace(`${frontend_base_url}/flow/Loading.html`);
+    window.location.replace(`${frontend_base_url}/check_letter/endpage.html`);
   } else {
     alert(response.status);
   }
