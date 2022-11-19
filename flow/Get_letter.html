@@ -9,6 +9,10 @@
     <title>시간되면 산타가 썰매타고 날아옴</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+            /**api token code */
+       /* const frontend_base_url = "http://127.0.0.1:5500";
+        /**backend url */
+       // const backend_base_url = "http://15.164.132.25:8000";
         var obTimeOut; // clearTimeout() 함수를 이용하여 Timeout 을 취소하기위해 사용됨
         var ObjectArray = new Array ();
         ObjectArray[1] = "./img/santa_move1.svg";
@@ -38,8 +42,16 @@
         }
         window.onload = startAnimation;
 
-
+        /* async function handleLogout(){
+    
+        localStorage.removeItem("access")
+        localStorage.removeItem("refresh")
+        localStorage.removeItem("payload")
+        alert("로그아웃되었습니다.");
+        widow.location.replace(`${frontend_base_url}/account/login_main.html`);
+         }
        
+         $("#btn").click(handleLogout);*/
     </script>
 
 </head>
@@ -47,7 +59,6 @@
     <div class="all_i_want">
     <div class="upper">
         <img class="up_logo" src="./img/logo.png" alt="로고이미지">
-        <img class="profile_logo" src="./img/profile.png" alt="플필이미지">
     </div>
    
 

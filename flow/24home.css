@@ -1,0 +1,209 @@
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverse_image{
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+.all_i_want{
+    margin: 0 auto;
+}
+
+
+body{
+    background-color:  #050524;
+    margin:0 auto;
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+
+.up_logo{
+    width: 125.65px;
+    margin-top: 25px;
+    margin-left: 135px;
+    
+}
+.upper{
+    width: 390px;
+}
+
+.profile_logo{
+   margin-left: 80px;
+margin-top:52px;
+ 
+}
+
+.upper_star{
+    display:flex;
+}
+.one_star{
+    width:19px;
+    height: 18px;
+    margin-left:15px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+.two_star{
+    margin-top: 130px;
+    width:33px;
+    height: 32px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
+}
+.three_star{
+    width:17px;
+    height: 16px;
+    margin-left:80px;
+    margin-top: 30px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+.four_star{
+    width:26px;
+    height: 25px;
+    margin-left: 70px;
+    margin-top:100px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+.five_star{
+    width:23px;
+    height: 22px;
+    margin-top: 15px;
+    margin-left: 40px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
+}
+.six_star{
+    width:23px;
+    height: 22px;
+    margin-left:20px;
+    margin-top: 150px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+
+#mid{
+    white-space: pre-line;
+    width: 100%;
+    word-break: keep-all;
+    color:white;
+    padding: 30px 0px;
+    line-height: 16px;
+    text-align: center;
+    margin: 0 auto;    
+}
+
+
+
+.lower_star{
+    display: flex;
+    margin-top:69px;
+}
+
+.low_one_star{
+    width:22px;
+    height: 21px;
+    margin-left: 20px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+
+.low_two_star{
+    width:33px;
+    height:32px;
+    margin-left: 30px;
+    margin-top: 150px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
+}
+
+.low_three_star{
+    width:32px;
+    height:31px;
+    margin-left: 160px;
+    margin-top: 30px;
+    animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+
+.low_four_star{
+    width:19px;
+    height: 18px;
+    margin-left: 40px;
+    margin-top: 160px;
+    animation: reverse_image 6s linear infinite;transform-origin: 50% 50%;
+}
+
+.lower{
+    display: flex;
+    margin-top:-38px;
+    
+}
+.snowball{
+    width:118px;
+    height:109px;
+    margin-left: 10px;
+    margin-top: 70px;
+    z-index: 3;
+}
+.tree{
+    width:104px;
+    height:256px;
+    margin-top:-83px;
+    margin-left:15px;
+    z-index: 3;
+}
+.snowman{
+    width:102px;
+    height:110px;
+    margin-left:15px;
+    margin-top: 80px;
+    z-index: 3;
+}
+.foot{
+    display: flex;
+}
+.snow{
+    margin-top:-31px;
+    position:relative;
+    width: 390px;
+    z-index:0;
+    margin:0;
+}
+
+
+
+footer{
+    width:390px;
+    display: flex;
+}
+.foot_logo{
+    width:390px;
+    margin-top:-1px;
+}
+.fo{
+    margin-top:-31px;
+}
+
+.mid_t{
+   width:390px;
+   height: 20px;
+   text-align: center;
+}
+#writeLogout{
+    background-color: #050524;
+    border: none;
+    outline: none;
+  }
+
+#next{
+    background-color: #050524;
+    border: none;
+    outline: none;
+   
+  }
