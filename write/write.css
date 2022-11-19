@@ -123,3 +123,10 @@ footer span {
   /* position: absolute;
   bottom: 0; */
 }
+
+
+#writeLogout{
+  background-color: #ffe2a9;
+  border: none;
+  outline: none;
+}

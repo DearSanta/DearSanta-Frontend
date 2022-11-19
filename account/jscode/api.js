@@ -3,6 +3,15 @@ const frontend_base_url = "http://127.0.0.1:5500"
 /**backend url */
 const backend_base_url = "http://15.164.132.25:8000"
 
+async function handleLogout(){
+    
+    localStorage.removeItem("access_token")
+    // localStorage.removeItem("refresh")
+    localStorage.removeItem("payload")
+    alert("로그아웃되었습니다.");
+    window.location.replace(`${frontend_base_url}/account/login_main.html`);
+}
+
 async function handleSignin(){
 
     const signupData = {
@@ -68,3 +77,4 @@ async function handleLogin(){
         alert(response.status)
     }
 }
+

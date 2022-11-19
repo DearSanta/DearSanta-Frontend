@@ -44,3 +44,9 @@
 #ItsmeImg {
   margin-top: 60px;
 }
+
+#letterCheckLogout{
+  background-color: #ffe2a9;
+  border: none;
+  outline: none;
+}

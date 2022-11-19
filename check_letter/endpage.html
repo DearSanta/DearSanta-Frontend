@@ -58,8 +58,8 @@
         position: absolute;
         width: 147px;
         height: 65px;
-        left: 122px;
-        top: 138px;
+        margin-left: 122px;
+        margin-top: 138px;
 
 
         font-family: 'Pangolin';
@@ -94,8 +94,8 @@
         position: absolute;
         width: 196px;
         height: 184px;
-        left: 97px;
-        top: 376px;
+        margin-left: 97px;
+        margin-top: 376px;
     }
 
     .submit {
@@ -171,6 +171,12 @@
 
         color: #4D2E27;
     }
+
+    #endPageLogout{
+        background-color: #ffe2a9;
+        border: none;
+        outline: none;
+    }
 </style>
 
 <body>
@@ -179,7 +185,7 @@
             ">e</a><a style="color:#FFA800;">a</a><a style="color: #40A8E2;">r</a><a style="color:#4D2E27">. Santa</a>
         </div>
         <div class="my_page">
-            <image src="../Image/profile.svg"></image>
+            <button id="endPageLogout" onclick="handleLogout()"><image src="../Image/logout.svg"></image></button>
         </div>
 
 
@@ -210,6 +216,19 @@
             </section>
         </footer>
     </div>
+    <!-- <script>
+        const logout = document.getElementById("logout");
+        logout.addEventListener('click',function(){
+            async function handleLogout(){
+                localStorage.removeItem("access")
+                localStorage.removeItem("refresh")
+                localStorage.removeItem("payload")
+                alert("로그아웃되었습니다.");
+                widow.location.replace(`${frontend_base_url}/account/login_main.html`);
+            }
+        })
+    </script> -->
+    <script src="../account/jscode/api.js"></script>
 </body>
 
 </html>

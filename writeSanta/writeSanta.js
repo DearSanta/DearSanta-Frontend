@@ -163,3 +163,13 @@ async function sendLetterAsSanta() {
 //     .then((res) => res.json())
 //     .then((data) => console.log(data));
 // });
+
+
+async function writeSantaLogout(){
+    
+  localStorage.removeItem("access_token")
+  // localStorage.removeItem("refresh")
+  localStorage.removeItem("payload")
+  alert("로그아웃되었습니다.");
+  window.location.replace(`${frontend_base_url}/account/login_main.html`);
+}
