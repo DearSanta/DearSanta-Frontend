@@ -13,7 +13,7 @@
 </head>
 
 <style>
-    body{
+    body {
         margin: 0 auto;
     }
 
@@ -158,7 +158,7 @@
         color: #FFB526;
     }
 
-    #checkPw {
+    .pwd_alert {
         position: absolute;
         width: 155px;
         height: 13px;
@@ -198,11 +198,13 @@
                 <input type="text" id="id" placeholder="아이디를 입력하세요">
             </div>
             <div>
-                <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요">
+                <input type="password" id="pwd" class="pw" placeholder="비밀번호를 입력하세요" required>
             </div>
+            <div class="pwd_alert" id="alert-success"></div>
+            <div class="pwd_alert" id="alert-danger">비밀번호가 일치하지 않습니다.</div>
             <div>
-                <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요">
-                <span id="checkPw"></span>
+                <input type="password" id="check_pwd" class="pw" placeholder="비밀번호를 다시 입력하세요" required>
+                <!-- <span id="checkPw"></span> -->
             </div>
             <div>
                 <button type="button" id=join_submitbtn onclick="handleSignin()" disabled>확인</button>
